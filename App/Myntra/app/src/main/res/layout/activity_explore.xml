@@ -101,6 +101,7 @@
         app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
+        android:id="@+id/tvCExplore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Explore"

@@ -12,7 +12,7 @@
         <activity android:name=".ProfileActivity"></activity>
         <activity android:name=".ExploreActivity" />
         <activity android:name=".StudioActivity" />
-        <activity android:name=".CatogeriesActivity" />
+        <activity android:name=".CategoriesActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

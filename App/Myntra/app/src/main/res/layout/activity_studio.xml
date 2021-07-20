@@ -11,11 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/bg"
-        app:layout_constraintBottom_toBottomOf="@id/tvStudio"
-        app:layout_constraintTop_toTopOf="@id/tvStudio" />
+        app:layout_constraintBottom_toBottomOf="@id/tvTopStudio"
+        app:layout_constraintTop_toTopOf="@id/tvTopStudio" />
 
     <TextView
-        android:id="@+id/tvStudio"
+        android:id="@+id/tvTopStudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
@@ -31,9 +31,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:src="@drawable/ic_search"
-        app:layout_constraintBottom_toBottomOf="@id/tvStudio"
+        app:layout_constraintBottom_toBottomOf="@id/tvTopStudio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvStudio" />
+        app:layout_constraintTop_toTopOf="@id/tvTopStudio" />
 
     <ImageView
         android:id="@+id/setting"
@@ -41,9 +41,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:src="@drawable/ic_setting"
-        app:layout_constraintBottom_toBottomOf="@id/tvStudio"
+        app:layout_constraintBottom_toBottomOf="@id/tvTopStudio"
         app:layout_constraintEnd_toStartOf="@id/search"
-        app:layout_constraintTop_toTopOf="@id/tvStudio" />
+        app:layout_constraintTop_toTopOf="@id/tvTopStudio" />
 
     <ImageView
         android:id="@+id/bookmark"
@@ -51,9 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:src="@drawable/ic_bookmark"
-        app:layout_constraintBottom_toBottomOf="@id/tvStudio"
+        app:layout_constraintBottom_toBottomOf="@id/tvTopStudio"
         app:layout_constraintEnd_toStartOf="@id/setting"
-        app:layout_constraintTop_toTopOf="@id/tvStudio" />
+        app:layout_constraintTop_toTopOf="@id/tvTopStudio" />
 
 
     <View
@@ -103,8 +103,8 @@
 
     <ImageView
         android:id="@+id/studio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="28dp"
+        android:layout_height="19dp"
         android:src="@drawable/ic_studio"
 
         app:layout_constraintBottom_toBottomOf="@id/home"
@@ -113,6 +113,7 @@
         app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
+        android:id="@+id/tvCStudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Studio"
@@ -132,6 +133,7 @@
         app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
+        android:id="@+id/tvExplore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Explore"
@@ -151,6 +153,7 @@
         app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
+        android:id="@+id/tvProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile"

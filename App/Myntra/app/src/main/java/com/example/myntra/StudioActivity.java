@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,12 +14,15 @@ public class StudioActivity extends AppCompatActivity {
     private ImageView studio;
     private ImageView explore;
     private ImageView profile;
+    private TextView tvStudio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studio);
         initViews();
+        studio.setColorFilter(getResources().getColor(R.color.red));
+        tvStudio.setTextColor(getResources().getColor(R.color.red));
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +33,7 @@ public class StudioActivity extends AppCompatActivity {
         categories.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StudioActivity.this, CatogeriesActivity.class);
+                Intent intent = new Intent(StudioActivity.this, CategoriesActivity.class);
                 startActivity(intent);
             }
         });
@@ -55,5 +59,6 @@ public class StudioActivity extends AppCompatActivity {
         studio = findViewById(R.id.studio);
         explore = findViewById(R.id.explore);
         profile = findViewById(R.id.profile);
+        tvStudio = findViewById(R.id.tvCStudio);
     }
 }
