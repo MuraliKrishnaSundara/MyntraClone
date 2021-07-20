@@ -72,6 +72,7 @@
         app:layout_constraintTop_toTopOf="@id/dehaze" />
 
     <View
+        android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@drawable/bg"
@@ -171,5 +172,12 @@
         app:layout_constraintEnd_toEndOf="@id/profile"
         app:layout_constraintStart_toStartOf="@id/profile"
         app:layout_constraintTop_toBottomOf="@id/profile" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintTop_toBottomOf="@id/topBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
