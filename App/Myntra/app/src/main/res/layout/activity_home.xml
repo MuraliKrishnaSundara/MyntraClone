@@ -6,4 +6,170 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="@id/dehaze"
+        app:layout_constraintTop_toTopOf="@id/dehaze" />
+
+    <ImageView
+        android:id="@+id/dehaze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_dehaze"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_myntra"
+        app:layout_constraintBottom_toBottomOf="@id/dehaze"
+        app:layout_constraintStart_toEndOf="@id/dehaze"
+        app:layout_constraintTop_toTopOf="@id/dehaze" />
+
+    <ImageView
+        android:id="@+id/cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_cart"
+        app:layout_constraintBottom_toBottomOf="@id/dehaze"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dehaze" />
+
+    <ImageView
+        android:id="@+id/favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_heart"
+        app:layout_constraintBottom_toBottomOf="@id/dehaze"
+        app:layout_constraintEnd_toStartOf="@id/cart"
+        app:layout_constraintTop_toTopOf="@id/dehaze" />
+
+    <ImageView
+        android:id="@+id/notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_notification"
+        app:layout_constraintBottom_toBottomOf="@id/dehaze"
+        app:layout_constraintEnd_toStartOf="@id/favourite"
+        app:layout_constraintTop_toTopOf="@id/dehaze" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@id/dehaze"
+        app:layout_constraintEnd_toStartOf="@id/notification"
+        app:layout_constraintTop_toTopOf="@id/dehaze" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+
+    <ImageView
+        android:id="@+id/myntraLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_myntra_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/category"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        app:layout_constraintEnd_toEndOf="@id/myntraLogo"
+        app:layout_constraintStart_toStartOf="@id/myntraLogo"
+        app:layout_constraintTop_toBottomOf="@id/myntraLogo" />
+
+    <ImageView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_category"
+
+        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintEnd_toStartOf="@+id/studio"
+        app:layout_constraintStart_toEndOf="@id/myntraLogo"
+        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        app:layout_constraintEnd_toEndOf="@id/category"
+        app:layout_constraintStart_toStartOf="@id/category"
+        app:layout_constraintTop_toBottomOf="@id/category" />
+
+    <ImageView
+        android:id="@+id/studio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_studio"
+
+        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintEnd_toStartOf="@id/explore"
+        app:layout_constraintStart_toEndOf="@id/category"
+        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Studio"
+        app:layout_constraintEnd_toEndOf="@id/studio"
+        app:layout_constraintStart_toStartOf="@id/studio"
+        app:layout_constraintTop_toBottomOf="@id/studio" />
+
+    <ImageView
+        android:id="@+id/explore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/ic_explore"
+        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintEnd_toStartOf="@id/profile"
+        app:layout_constraintStart_toEndOf="@id/studio"
+        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explore"
+        app:layout_constraintEnd_toEndOf="@id/explore"
+        app:layout_constraintStart_toStartOf="@id/explore"
+        app:layout_constraintTop_toBottomOf="@id/explore" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/ic_profile"
+        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/explore"
+        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        app:layout_constraintEnd_toEndOf="@id/profile"
+        app:layout_constraintStart_toStartOf="@id/profile"
+        app:layout_constraintTop_toBottomOf="@id/profile" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
