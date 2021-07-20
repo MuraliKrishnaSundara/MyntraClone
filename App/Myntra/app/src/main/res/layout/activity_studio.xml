@@ -4,72 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".StudioActivity">
 
     <View
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/bg"
-        app:layout_constraintBottom_toBottomOf="@id/dehaze"
-        app:layout_constraintTop_toTopOf="@id/dehaze" />
+        app:layout_constraintBottom_toBottomOf="@id/tvStudio"
+        app:layout_constraintTop_toTopOf="@id/tvStudio" />
 
-    <ImageView
-        android:id="@+id/dehaze"
+    <TextView
+        android:id="@+id/tvStudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:src="@drawable/ic_dehaze"
+        android:text="Studio"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_margin="20dp"
-        android:src="@drawable/ic_myntra"
-        app:layout_constraintBottom_toBottomOf="@id/dehaze"
-        app:layout_constraintStart_toEndOf="@id/dehaze"
-        app:layout_constraintTop_toTopOf="@id/dehaze" />
 
     <ImageView
-        android:id="@+id/cart"
+        android:id="@+id/search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:src="@drawable/ic_cart"
-        app:layout_constraintBottom_toBottomOf="@id/dehaze"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/dehaze" />
-
-    <ImageView
-        android:id="@+id/favourite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:src="@drawable/ic_heart"
-        app:layout_constraintBottom_toBottomOf="@id/dehaze"
-        app:layout_constraintEnd_toStartOf="@id/cart"
-        app:layout_constraintTop_toTopOf="@id/dehaze" />
-
-    <ImageView
-        android:id="@+id/notification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:src="@drawable/ic_notification"
-        app:layout_constraintBottom_toBottomOf="@id/dehaze"
-        app:layout_constraintEnd_toStartOf="@id/favourite"
-        app:layout_constraintTop_toTopOf="@id/dehaze" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
         android:src="@drawable/ic_search"
-        app:layout_constraintBottom_toBottomOf="@id/dehaze"
-        app:layout_constraintEnd_toStartOf="@id/notification"
-        app:layout_constraintTop_toTopOf="@id/dehaze" />
+        app:layout_constraintBottom_toBottomOf="@id/tvStudio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvStudio" />
+
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_setting"
+        app:layout_constraintBottom_toBottomOf="@id/tvStudio"
+        app:layout_constraintEnd_toStartOf="@id/search"
+        app:layout_constraintTop_toTopOf="@id/tvStudio" />
+
+    <ImageView
+        android:id="@+id/bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_bookmark"
+        app:layout_constraintBottom_toBottomOf="@id/tvStudio"
+        app:layout_constraintEnd_toStartOf="@id/setting"
+        app:layout_constraintTop_toTopOf="@id/tvStudio" />
+
 
     <View
         android:id="@+id/bottomBar"
@@ -179,5 +164,4 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"
         app:layout_constraintTop_toBottomOf="@id/topBar" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

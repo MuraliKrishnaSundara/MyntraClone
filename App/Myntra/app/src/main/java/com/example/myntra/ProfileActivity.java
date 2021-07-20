@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class HomeActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
     private ImageView home;
     private ImageView categories;
     private ImageView studio;
@@ -17,33 +17,33 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_profile);
         initViews();
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
         categories.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, CatogeriesActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, CatogeriesActivity.class);
                 startActivity(intent);
             }
         });
         studio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, StudioActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, StudioActivity.class);
                 startActivity(intent);
             }
         });
         explore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, ExploreActivity.class);
-                startActivity(intent);
-            }
-        });
-        profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, ExploreActivity.class);
                 startActivity(intent);
             }
         });
@@ -56,6 +56,4 @@ public class HomeActivity extends AppCompatActivity {
         explore = findViewById(R.id.explore);
         profile = findViewById(R.id.profile);
     }
-
-
 }
