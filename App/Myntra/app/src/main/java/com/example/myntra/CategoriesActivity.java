@@ -181,8 +181,6 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
         gadgetsList.add(new Data("Smart Wearables"));
         gadgetsList.add(new Data("Audio & Hearables"));
         gadgetsList.add(new Data("Mobile Accessories"));
-
-
     }
 
     private void initViews() {

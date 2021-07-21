@@ -216,9 +216,11 @@
                 android:visibility="gone" />
 
             <LinearLayout
+                android:id="@+id/llGadgets"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#fff"
+                android:visibility="gone"
                 android:orientation="vertical">
 
                 <TextView
@@ -228,6 +230,7 @@
                     android:text="Explore Smart Wearables Store" />
 
                 <TextView
+                    android:id="@+id/watches"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
