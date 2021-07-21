@@ -447,10 +447,10 @@
         android:layout_height="80dp"
         android:background="@drawable/bg"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/home" />
+        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
 
     <ImageView
-        android:id="@+id/home"
+        android:id="@+id/myntraLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
@@ -536,6 +536,7 @@
         app:layout_constraintTop_toTopOf="@id/myntraLogo" />
 
     <TextView
+        android:id="@+id/tvCProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile"

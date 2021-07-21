@@ -54,7 +54,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        home = findViewById(R.id.home);
+        home = findViewById(R.id.myntraLogo);
         categories = findViewById(R.id.category);
         studio = findViewById(R.id.studio);
         explore = findViewById(R.id.explore);
