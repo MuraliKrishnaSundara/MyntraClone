@@ -24,6 +24,422 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <RelativeLayout
+            android:id="@+id/profileRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/blackView"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="0dp"
+                android:background="#606060" />
+
+            <ImageView
+                android:id="@+id/ivProfileLogin"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/white"
+                android:src="@drawable/person_login" />
+
+            <Button
+                android:id="@+id/btnLogin_Signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/blackView"
+                android:layout_alignBottom="@+id/ivProfileLogin"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toRightOf="@+id/ivProfileLogin"
+                android:background="#FF007F"
+                android:text="LOG IN/SIGN UP"
+                android:textColor="@color/white" />
+
+            <View
+                android:id="@+id/ordersBar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/btnLogin_Signup"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg" />
+
+            <ImageView
+                android:id="@+id/ivOrders"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/ordersBar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="26dp"
+                android:src="@drawable/order_box" />
+
+            <TextView
+                android:id="@+id/tvOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ordersBar"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/ivOrders"
+                android:text="Orders"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOrdersDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvOrders"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/ivOrders"
+                android:text="Check your order status" />
+
+            <ImageView
+                android:id="@+id/ivRightArrow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ordersBar"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="206dp"
+                android:src="@drawable/arrow_right" />
+
+            <View
+                android:id="@+id/helpCenterBar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/ordersBar"
+                android:background="@drawable/bg" />
+
+            <ImageView
+                android:id="@+id/ivCustomerCare"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/helpCenterBar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/customer_care" />
+
+            <TextView
+                android:id="@+id/tvHelpCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/helpCenterBar"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/ivCustomerCare"
+                android:text="Help Center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvHelpCenterDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHelpCenter"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/ivCustomerCare"
+                android:text="Help regarding your recent purchases" />
+
+            <ImageView
+                android:id="@+id/ivRightArrow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/helpCenterBar"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="206dp"
+                android:src="@drawable/arrow_right" />
+
+            <View
+                android:id="@+id/wishlistBar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/helpCenterBar"
+                android:background="@drawable/bg" />
+
+            <ImageView
+                android:id="@+id/ivWishlistHeart"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/wishlistBar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/heart" />
+
+            <TextView
+                android:id="@+id/tvWishlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/wishlistBar"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/ivWishlistHeart"
+                android:text="Wishlist"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWishlistDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvWishlist"
+                android:layout_toRightOf="@id/ivWishlistHeart"
+                android:text="Your most loved styles" />
+
+            <ImageView
+                android:id="@+id/ivRightArrow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/wishlistBar"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="206dp"
+                android:src="@drawable/arrow_right" />
+
+            <View
+                android:id="@+id/notificationsBar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/wishlistBar"
+                android:background="@drawable/bg" />
+
+            <ImageView
+                android:id="@+id/ivNotifications"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/notificationsBar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/notifications" />
+
+            <TextView
+                android:id="@+id/tvNotifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/notificationsBar"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/ivNotifications"
+                android:text="Notifications"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNotificationsDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNotifications"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/ivNotifications"
+                android:text="Stay on top of all fashion related updates" />
+
+            <ImageView
+                android:id="@+id/ivRightArrow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/notificationsBar"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="206dp"
+                android:src="@drawable/arrow_right" />
+
+            <View
+                android:id="@+id/scanForCouponBar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/notificationsBar"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg" />
+
+            <ImageView
+                android:id="@+id/ivScanForCoupon"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/scanForCouponBar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/qr_code" />
+
+            <TextView
+                android:id="@+id/tvScanForCoupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/scanForCouponBar"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/ivScanForCoupon"
+                android:text="Scan for coupon"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivRightArrow5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/scanForCouponBar"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="206dp"
+                android:src="@drawable/arrow_right" />
+
+            <View
+                android:id="@+id/referAndEarnBar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/scanForCouponBar"
+                android:background="@drawable/bg" />
+
+            <ImageView
+                android:id="@+id/ivReferAndEarn"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/referAndEarnBar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/heart_mail" />
+
+            <TextView
+                android:id="@+id/tvReferAndEarn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/referAndEarnBar"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/ivReferAndEarn"
+                android:text="Refer &amp; Earn"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivRightArrow6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/referAndEarnBar"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="206dp"
+                android:src="@drawable/arrow_right" />
+
+            <View
+                android:id="@+id/fAQsBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/referAndEarnBar"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg" />
+
+            <TextView
+                android:id="@+id/tvFAQs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/fAQsBar"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@id/ivReferAndEarn"
+                android:text="FAQs"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/aboutUsBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/fAQsBar"
+                android:background="@drawable/bg" />
+
+            <TextView
+                android:id="@+id/tvAboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/aboutUsBar"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@id/ivReferAndEarn"
+                android:text="ABOUT US"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/termsOfUseBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/aboutUsBar"
+                android:background="@drawable/bg" />
+
+            <TextView
+                android:id="@+id/tvTermsOfUse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/termsOfUseBar"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@id/ivReferAndEarn"
+                android:text="TERMS OF USE"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/privacyPolicyBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/termsOfUseBar"
+                android:background="@drawable/bg" />
+
+            <TextView
+                android:id="@+id/tvPrivacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/privacyPolicyBar"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@id/ivReferAndEarn"
+                android:text="PRIVACY POLICY"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/privacyPolicyBar"
+                android:layout_alignBottom="@id/profileRelativeLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="200dp"
+                android:text="APP VERSION 4.2105.1"
+                tools:ignore="NotSibling" />
+
+        </RelativeLayout>
+    </ScrollView>
 
     <View
         android:id="@+id/bottomBar"
@@ -56,7 +472,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_category"
-
         app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
         app:layout_constraintEnd_toStartOf="@+id/studio"
         app:layout_constraintStart_toEndOf="@id/myntraLogo"
@@ -75,7 +490,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_studio"
-
         app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
         app:layout_constraintEnd_toStartOf="@id/explore"
         app:layout_constraintStart_toEndOf="@id/category"
@@ -96,7 +510,7 @@
 
         android:src="@drawable/ic_explore"
         app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
-        app:layout_constraintEnd_toStartOf="@id/profile"
+        app:layout_constraintEnd_toStartOf="@id/btnProfile"
         app:layout_constraintStart_toEndOf="@id/studio"
         app:layout_constraintTop_toTopOf="@id/myntraLogo" />
 
@@ -109,10 +523,9 @@
         app:layout_constraintTop_toBottomOf="@id/explore" />
 
     <ImageView
-        android:id="@+id/profile"
+        android:id="@+id/btnProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:src="@drawable/ic_profile"
         app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,17 +536,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile"
-        app:layout_constraintEnd_toEndOf="@id/profile"
-        app:layout_constraintStart_toStartOf="@id/profile"
-        app:layout_constraintTop_toBottomOf="@id/profile" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/bottomBar"
-        app:layout_constraintTop_toBottomOf="@id/topBar">
-
-
-    </ScrollView>
+        app:layout_constraintEnd_toEndOf="@id/btnProfile"
+        app:layout_constraintStart_toStartOf="@id/btnProfile"
+        app:layout_constraintTop_toBottomOf="@id/btnProfile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
