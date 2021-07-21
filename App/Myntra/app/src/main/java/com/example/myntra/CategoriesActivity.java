@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -32,6 +34,8 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
     private RecyclerView rMen;
     private RecyclerView rKid;
     private RecyclerView rGadgets;
+    private LinearLayout llgadgets;
+    private TextView tvgadgestsLL;
 
 
     @Override
@@ -114,6 +118,7 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
                 }
             }
         });
+
     }
 
     private void setRecyclerView() {
@@ -131,6 +136,7 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
         rMen.setAdapter(categoryAdapterMen);
         rKid.setAdapter(categoryAdapterKid);
         rGadgets.setAdapter(categoryAdapterGadgets);
+
         rWomen.setLayoutManager(linearLayoutManagerWomen);
         rMen.setLayoutManager(linearLayoutManagerMen);
         rKid.setLayoutManager(linearLayoutManagerKid);
@@ -181,8 +187,6 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
         gadgetsList.add(new Data("Smart Wearables"));
         gadgetsList.add(new Data("Audio & Hearables"));
         gadgetsList.add(new Data("Mobile Accessories"));
-
-
     }
 
     private void initViews() {
@@ -201,11 +205,13 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
         rKid = findViewById(R.id.recyclerViewKid);
         rGadgets = findViewById(R.id.recyclerViewGadgets);
         downArrow = findViewById(R.id.ivCdown);
+        llgadgets = findViewById(R.id.llGadgets);
+        tvgadgestsLL = findViewById(R.id.tvGadgetsLL);
     }
 
     @Override
     public void ItemClicked(Data data, int position) {
-
+        Toast.makeText(this, "Item clicked at position " + (position + 1), Toast.LENGTH_SHORT).show();
     }
 
     @Override
