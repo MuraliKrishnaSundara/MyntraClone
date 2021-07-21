@@ -149,11 +149,116 @@
         app:layout_constraintStart_toStartOf="@id/profile"
         app:layout_constraintTop_toBottomOf="@id/profile" />
 
-    <androidx.recyclerview.widget.RecyclerView
+    <ScrollView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"
-        app:layout_constraintTop_toBottomOf="@id/topBar" />
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/c_women"
+                style="@style/style"
+                android:src="@drawable/women" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewWomen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/c_men"
+                style="@style/style"
+                android:src="@drawable/men" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/c_kid"
+                style="@style/style"
+                android:src="@drawable/kids" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewKid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/c_beauty"
+                style="@style/style"
+                android:src="@drawable/beauty" />
+
+            <ImageView
+                android:id="@+id/c_homeliving"
+                style="@style/style"
+                android:src="@drawable/homeliving" />
+
+            <ImageView
+                android:id="@+id/c_gadgets"
+                style="@style/style"
+                android:src="@drawable/gadgets" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewGadgets"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Explore Smart Wearables Store" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Smart Watches" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Fitness Band" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/c_plus"
+                style="@style/style"
+                android:src="@drawable/plus" />
+
+            <ImageView
+                android:id="@+id/c_theme_store"
+                style="@style/style"
+                android:src="@drawable/theme_store" />
+
+            <ImageView
+                android:id="@+id/c_myntramall"
+                style="@style/style"
+                android:src="@drawable/myntramall" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
