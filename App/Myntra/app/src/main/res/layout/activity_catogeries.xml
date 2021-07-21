@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CatogeriesActivity">
+    tools:context=".CategoriesActivity">
 
     <View
         android:id="@+id/topBar"
@@ -52,10 +52,10 @@
         android:layout_height="80dp"
         android:background="@drawable/bg"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <ImageView
-        android:id="@+id/myntraLogo"
+        android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
@@ -68,9 +68,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Home"
-        app:layout_constraintEnd_toEndOf="@id/myntraLogo"
-        app:layout_constraintStart_toStartOf="@id/myntraLogo"
-        app:layout_constraintTop_toBottomOf="@id/myntraLogo" />
+        app:layout_constraintEnd_toEndOf="@id/home"
+        app:layout_constraintStart_toStartOf="@id/home"
+        app:layout_constraintTop_toBottomOf="@id/home" />
 
     <ImageView
         android:id="@+id/category"
@@ -78,12 +78,13 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_category"
 
-        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintBottom_toBottomOf="@id/home"
         app:layout_constraintEnd_toStartOf="@+id/studio"
-        app:layout_constraintStart_toEndOf="@id/myntraLogo"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintStart_toEndOf="@id/home"
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
+        android:id="@+id/tvCCategories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Categories"
@@ -97,10 +98,10 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_studio"
 
-        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintBottom_toBottomOf="@id/home"
         app:layout_constraintEnd_toStartOf="@id/explore"
         app:layout_constraintStart_toEndOf="@id/category"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -116,10 +117,10 @@
         android:layout_height="wrap_content"
 
         android:src="@drawable/ic_explore"
-        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
-        app:layout_constraintEnd_toStartOf="@id/btnProfile"
+        app:layout_constraintBottom_toBottomOf="@id/home"
+        app:layout_constraintEnd_toStartOf="@id/profile"
         app:layout_constraintStart_toEndOf="@id/studio"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -130,29 +131,134 @@
         app:layout_constraintTop_toBottomOf="@id/explore" />
 
     <ImageView
-        android:id="@+id/btnProfile"
+        android:id="@+id/profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:src="@drawable/ic_profile"
-        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintBottom_toBottomOf="@id/home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/explore"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile"
-        app:layout_constraintEnd_toEndOf="@id/btnProfile"
-        app:layout_constraintStart_toStartOf="@id/btnProfile"
-        app:layout_constraintTop_toBottomOf="@id/btnProfile" />
+        app:layout_constraintEnd_toEndOf="@id/profile"
+        app:layout_constraintStart_toStartOf="@id/profile"
+        app:layout_constraintTop_toBottomOf="@id/profile" />
 
-    <androidx.recyclerview.widget.RecyclerView
+    <ScrollView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"
-        app:layout_constraintTop_toBottomOf="@id/topBar" />
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/c_women"
+                style="@style/style"
+                android:src="@drawable/women" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewWomen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/c_men"
+                style="@style/style"
+                android:src="@drawable/men" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/c_kid"
+                style="@style/style"
+                android:src="@drawable/kids" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewKid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/c_beauty"
+                style="@style/style"
+                android:src="@drawable/beauty" />
+
+            <ImageView
+                android:id="@+id/c_homeliving"
+                style="@style/style"
+                android:src="@drawable/homeliving" />
+
+            <ImageView
+                android:id="@+id/c_gadgets"
+                style="@style/style"
+                android:src="@drawable/gadgets" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewGadgets"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Explore Smart Wearables Store" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Smart Watches" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Fitness Band" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/c_plus"
+                style="@style/style"
+                android:src="@drawable/plus" />
+
+            <ImageView
+                android:id="@+id/c_theme_store"
+                style="@style/style"
+                android:src="@drawable/theme_store" />
+
+            <ImageView
+                android:id="@+id/c_myntramall"
+                style="@style/style"
+                android:src="@drawable/myntramall" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

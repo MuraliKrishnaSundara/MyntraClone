@@ -11,11 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/bg"
-        app:layout_constraintBottom_toBottomOf="@id/tvStudio"
-        app:layout_constraintTop_toTopOf="@id/tvStudio" />
+        app:layout_constraintBottom_toBottomOf="@id/tvTopStudio"
+        app:layout_constraintTop_toTopOf="@id/tvTopStudio" />
 
     <TextView
-        android:id="@+id/tvStudio"
+        android:id="@+id/tvTopStudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
@@ -31,9 +31,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:src="@drawable/ic_search"
-        app:layout_constraintBottom_toBottomOf="@id/tvStudio"
+        app:layout_constraintBottom_toBottomOf="@id/tvTopStudio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvStudio" />
+        app:layout_constraintTop_toTopOf="@id/tvTopStudio" />
 
     <ImageView
         android:id="@+id/setting"
@@ -41,9 +41,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:src="@drawable/ic_setting"
-        app:layout_constraintBottom_toBottomOf="@id/tvStudio"
+        app:layout_constraintBottom_toBottomOf="@id/tvTopStudio"
         app:layout_constraintEnd_toStartOf="@id/search"
-        app:layout_constraintTop_toTopOf="@id/tvStudio" />
+        app:layout_constraintTop_toTopOf="@id/tvTopStudio" />
 
     <ImageView
         android:id="@+id/bookmark"
@@ -51,9 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:src="@drawable/ic_bookmark"
-        app:layout_constraintBottom_toBottomOf="@id/tvStudio"
+        app:layout_constraintBottom_toBottomOf="@id/tvTopStudio"
         app:layout_constraintEnd_toStartOf="@id/setting"
-        app:layout_constraintTop_toTopOf="@id/tvStudio" />
+        app:layout_constraintTop_toTopOf="@id/tvTopStudio" />
 
 
     <View
@@ -62,10 +62,10 @@
         android:layout_height="80dp"
         android:background="@drawable/bg"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <ImageView
-        android:id="@+id/myntraLogo"
+        android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
@@ -78,9 +78,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Home"
-        app:layout_constraintEnd_toEndOf="@id/myntraLogo"
-        app:layout_constraintStart_toStartOf="@id/myntraLogo"
-        app:layout_constraintTop_toBottomOf="@id/myntraLogo" />
+        app:layout_constraintEnd_toEndOf="@id/home"
+        app:layout_constraintStart_toStartOf="@id/home"
+        app:layout_constraintTop_toBottomOf="@id/home" />
 
     <ImageView
         android:id="@+id/category"
@@ -88,10 +88,10 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_category"
 
-        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintBottom_toBottomOf="@id/home"
         app:layout_constraintEnd_toStartOf="@+id/studio"
-        app:layout_constraintStart_toEndOf="@id/myntraLogo"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintStart_toEndOf="@id/home"
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -103,16 +103,17 @@
 
     <ImageView
         android:id="@+id/studio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="28dp"
+        android:layout_height="19dp"
         android:src="@drawable/ic_studio"
 
-        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintBottom_toBottomOf="@id/home"
         app:layout_constraintEnd_toStartOf="@id/explore"
         app:layout_constraintStart_toEndOf="@id/category"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
+        android:id="@+id/tvCStudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Studio"
@@ -126,12 +127,13 @@
         android:layout_height="wrap_content"
 
         android:src="@drawable/ic_explore"
-        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
-        app:layout_constraintEnd_toStartOf="@id/btnProfile"
+        app:layout_constraintBottom_toBottomOf="@id/home"
+        app:layout_constraintEnd_toStartOf="@id/profile"
         app:layout_constraintStart_toEndOf="@id/studio"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
+        android:id="@+id/tvExplore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Explore"
@@ -140,23 +142,24 @@
         app:layout_constraintTop_toBottomOf="@id/explore" />
 
     <ImageView
-        android:id="@+id/btnProfile"
+        android:id="@+id/profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:src="@drawable/ic_profile"
-        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintBottom_toBottomOf="@id/home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/explore"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
+        android:id="@+id/tvProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile"
-        app:layout_constraintEnd_toEndOf="@id/btnProfile"
-        app:layout_constraintStart_toStartOf="@id/btnProfile"
-        app:layout_constraintTop_toBottomOf="@id/btnProfile" />
+        app:layout_constraintEnd_toEndOf="@id/profile"
+        app:layout_constraintStart_toStartOf="@id/profile"
+        app:layout_constraintTop_toBottomOf="@id/profile" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

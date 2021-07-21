@@ -77,10 +77,10 @@
         android:layout_height="80dp"
         android:background="@drawable/bg"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <ImageView
-        android:id="@+id/myntraLogo"
+        android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
@@ -90,12 +90,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/tvCHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Home"
-        app:layout_constraintEnd_toEndOf="@id/myntraLogo"
-        app:layout_constraintStart_toStartOf="@id/myntraLogo"
-        app:layout_constraintTop_toBottomOf="@id/myntraLogo" />
+        app:layout_constraintEnd_toEndOf="@id/home"
+        app:layout_constraintStart_toStartOf="@id/home"
+        app:layout_constraintTop_toBottomOf="@id/home" />
 
     <ImageView
         android:id="@+id/category"
@@ -103,10 +104,10 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_category"
 
-        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintBottom_toBottomOf="@id/home"
         app:layout_constraintEnd_toStartOf="@+id/studio"
-        app:layout_constraintStart_toEndOf="@id/myntraLogo"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintStart_toEndOf="@id/home"
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -122,10 +123,10 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_studio"
 
-        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintBottom_toBottomOf="@id/home"
         app:layout_constraintEnd_toStartOf="@id/explore"
         app:layout_constraintStart_toEndOf="@id/category"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -141,10 +142,10 @@
         android:layout_height="wrap_content"
 
         android:src="@drawable/ic_explore"
-        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintBottom_toBottomOf="@id/home"
         app:layout_constraintEnd_toStartOf="@id/profile"
         app:layout_constraintStart_toEndOf="@id/studio"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -160,10 +161,10 @@
         android:layout_height="wrap_content"
 
         android:src="@drawable/ic_profile"
-        app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
+        app:layout_constraintBottom_toBottomOf="@id/home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/explore"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <TextView
         android:layout_width="wrap_content"

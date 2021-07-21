@@ -447,10 +447,10 @@
         android:layout_height="80dp"
         android:background="@drawable/bg"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/myntraLogo" />
+        app:layout_constraintTop_toTopOf="@id/home" />
 
     <ImageView
-        android:id="@+id/myntraLogo"
+        android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
@@ -472,6 +472,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_category"
+
         app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
         app:layout_constraintEnd_toStartOf="@+id/studio"
         app:layout_constraintStart_toEndOf="@id/myntraLogo"
@@ -490,6 +491,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_studio"
+
         app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
         app:layout_constraintEnd_toStartOf="@id/explore"
         app:layout_constraintStart_toEndOf="@id/category"
@@ -510,7 +512,7 @@
 
         android:src="@drawable/ic_explore"
         app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
-        app:layout_constraintEnd_toStartOf="@id/btnProfile"
+        app:layout_constraintEnd_toStartOf="@id/profile"
         app:layout_constraintStart_toEndOf="@id/studio"
         app:layout_constraintTop_toTopOf="@id/myntraLogo" />
 
@@ -523,9 +525,10 @@
         app:layout_constraintTop_toBottomOf="@id/explore" />
 
     <ImageView
-        android:id="@+id/btnProfile"
+        android:id="@+id/profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:src="@drawable/ic_profile"
         app:layout_constraintBottom_toBottomOf="@id/myntraLogo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -536,8 +539,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile"
-        app:layout_constraintEnd_toEndOf="@id/btnProfile"
-        app:layout_constraintStart_toStartOf="@id/btnProfile"
-        app:layout_constraintTop_toBottomOf="@id/btnProfile" />
+        app:layout_constraintEnd_toEndOf="@id/profile"
+        app:layout_constraintStart_toStartOf="@id/profile"
+        app:layout_constraintTop_toBottomOf="@id/profile" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
