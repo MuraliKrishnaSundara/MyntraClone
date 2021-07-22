@@ -80,6 +80,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (validPhoneNumber()) {
                     Intent intent = new Intent(ProfileActivity.this, Login_Activity.class);
+                    intent.putExtra("phoneNumber", phoneNumber.getText().toString());
                     startActivity(intent);
                 }
             }

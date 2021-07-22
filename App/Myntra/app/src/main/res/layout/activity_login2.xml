@@ -43,12 +43,14 @@
         android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/loginPhoneNumber"
+        android:id="@+id/tvLoginPhoneNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@drawable/edittext_bg"
         android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:padding="20dp" />
 
     <EditText
