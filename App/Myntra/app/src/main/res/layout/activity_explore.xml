@@ -184,19 +184,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 />
+
             <TextView
                 android:id="@+id/tvInsider"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="@id/vInsider"
-                app:layout_constraintBottom_toBottomOf="@id/vInsider"
-                app:layout_constraintStart_toStartOf="parent"
-                android:textSize="20dp"
-                android:textColor="@color/black"
-                android:text="Myntra Insider"
+                android:layout_width="173dp"
+                android:layout_height="24dp"
                 android:layout_marginLeft="10dp"
                 android:drawableLeft="@drawable/ic_insider"
                 android:drawablePadding="20dp"
+                android:text="Myntra Insider"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/vInsider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/vInsider"
 
                 />
             <TextView
