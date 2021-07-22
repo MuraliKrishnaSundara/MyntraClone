@@ -150,7 +150,6 @@
         app:layout_constraintTop_toBottomOf="@id/profile" />
 
     <ScrollView
-        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"
@@ -216,18 +215,22 @@
                 android:visibility="gone" />
 
             <LinearLayout
+                android:id="@+id/llGadgets"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#fff"
+                android:visibility="gone"
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tvGadgetsLL"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="Explore Smart Wearables Store" />
 
                 <TextView
+                    android:id="@+id/watches"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"

@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,6 +35,9 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
     private RecyclerView rMen;
     private RecyclerView rKid;
     private RecyclerView rGadgets;
+    private ConstraintLayout showGadgets;
+    private LinearLayout llgadgets;
+    private TextView tvgadgestsLL;
 
 
     @Override
@@ -108,12 +114,26 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
                 if (rGadgets.getVisibility() == View.GONE) {
                     rGadgets.setVisibility(View.VISIBLE);
                     //downArrow.setColorFilter(getResources().getColor(R.color.red));
+                    rGadgets.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if (llgadgets.getVisibility() == View.GONE) {
+                                llgadgets.setVisibility(View.VISIBLE);
+                                //downArrow.setColorFilter(getResources().getColor(R.color.red));
+
+                            } else {
+                                llgadgets.setVisibility(View.GONE);
+                            }
+                        }
+                    });
 
                 } else {
                     rGadgets.setVisibility(View.GONE);
                 }
             }
         });
+
+
     }
 
     private void setRecyclerView() {
@@ -131,6 +151,7 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
         rMen.setAdapter(categoryAdapterMen);
         rKid.setAdapter(categoryAdapterKid);
         rGadgets.setAdapter(categoryAdapterGadgets);
+
         rWomen.setLayoutManager(linearLayoutManagerWomen);
         rMen.setLayoutManager(linearLayoutManagerMen);
         rKid.setLayoutManager(linearLayoutManagerKid);
@@ -181,8 +202,6 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
         gadgetsList.add(new Data("Smart Wearables"));
         gadgetsList.add(new Data("Audio & Hearables"));
         gadgetsList.add(new Data("Mobile Accessories"));
-
-
     }
 
     private void initViews() {
@@ -201,11 +220,14 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
         rKid = findViewById(R.id.recyclerViewKid);
         rGadgets = findViewById(R.id.recyclerViewGadgets);
         downArrow = findViewById(R.id.ivCdown);
+        llgadgets = findViewById(R.id.llGadgets);
+        tvgadgestsLL = findViewById(R.id.tvGadgetsLL);
+        showGadgets = findViewById(R.id.showGadgets);
     }
 
     @Override
     public void ItemClicked(Data data, int position) {
-
+        Toast.makeText(this, "Item clicked", Toast.LENGTH_SHORT).show();
     }
 
     @Override
