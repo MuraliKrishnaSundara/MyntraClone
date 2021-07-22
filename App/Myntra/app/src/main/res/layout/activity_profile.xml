@@ -57,6 +57,16 @@
                 android:background="@drawable/edittext_bg"
                 android:src="@drawable/person_login" />
 
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/blackView"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/ivProfileLogin"
+                android:text="Name"
+                android:textColor="@color/black" />
+
             <Button
                 android:id="@+id/btnLogin_Signup"
                 android:layout_width="wrap_content"
