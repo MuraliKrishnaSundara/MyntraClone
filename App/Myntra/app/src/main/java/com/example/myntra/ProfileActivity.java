@@ -78,8 +78,10 @@ public class ProfileActivity extends AppCompatActivity {
         loginContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ProfileActivity.this, Login_Activity.class);
-                startActivity(intent);
+                if (validPhoneNumber()) {
+                    Intent intent = new Intent(ProfileActivity.this, Login_Activity.class);
+                    startActivity(intent);
+                }
             }
         });
         signUp.setOnClickListener(new View.OnClickListener() {
@@ -112,5 +114,14 @@ public class ProfileActivity extends AppCompatActivity {
         forgot = findViewById(R.id.forgotPassword);
         signUp = findViewById(R.id.signUP);
         phoneNumber = findViewById(R.id.loginPhoneNumber);
+    }
+
+    private boolean validPhoneNumber() {
+        if (phoneNumber.getText().toString().length() == 10)
+            return true;
+        else {
+            phoneNumber.setError("Enter valid Phone Number");
+            return false;
+        }
     }
 }

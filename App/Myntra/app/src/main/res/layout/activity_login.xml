@@ -5,17 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentBottom="true"
-    android:background="#C4C4C4"
+    android:background="#F9F9F9"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@color/white"
-        android:src="@drawable/ic_myntra" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/jkla"
+            app:layout_constraintTop_toTopOf="@id/jkla" />
+
+        <ImageView
+            android:id="@+id/jkla"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:src="@drawable/ic_myntra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,14 +42,13 @@
         android:textColor="@color/black"
         android:textSize="30sp" />
 
-    <EditText
+    <TextView
         android:id="@+id/loginPhoneNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@drawable/edittext_bg"
-        android:hint="Mobile Number"
-        android:inputType="number"
+        android:textColor="@color/black"
         android:padding="20dp" />
 
     <EditText
@@ -98,7 +114,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:background="@color/red"
+        android:background="@color/pink"
         android:padding="10dp"
         android:text="CONTINUE"
         android:textColor="@color/white" />
@@ -112,10 +128,10 @@
             android:id="@+id/signUP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/red"
+            android:background="@drawable/edittext_bg"
             android:padding="10dp"
             android:text="SignUP"
-            android:textColor="@color/black"
+            android:textColor="@color/red"
             android:textSize="22sp"
             app:layout_constraintEnd_toStartOf="@id/forgotPassword"
             app:layout_constraintStart_toStartOf="parent"
