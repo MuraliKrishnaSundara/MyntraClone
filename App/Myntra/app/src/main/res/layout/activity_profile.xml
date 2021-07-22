@@ -75,6 +75,7 @@
                 android:text="LOG IN/SIGN UP"
                 android:textColor="@color/white" />
 
+
             <View
                 android:id="@+id/ordersBar"
                 android:layout_width="match_parent"
