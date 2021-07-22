@@ -37,14 +37,13 @@
 
     <ImageView
         android:id="@+id/favourite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_margin="15dp"
-        android:src="@drawable/ic_heart"
+        android:src="@drawable/heart"
         app:layout_constraintBottom_toBottomOf="@id/tvCategories"
         app:layout_constraintEnd_toStartOf="@id/cart"
         app:layout_constraintTop_toTopOf="@id/tvCategories" />
-
 
     <View
         android:id="@+id/bottomBar"
@@ -220,8 +219,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#fff"
-                android:visibility="gone"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/tvGadgetsLL"
