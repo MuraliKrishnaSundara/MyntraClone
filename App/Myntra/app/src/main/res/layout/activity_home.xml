@@ -171,8 +171,8 @@
         app:layout_constraintStart_toStartOf="@id/profile"
         app:layout_constraintTop_toBottomOf="@id/profile" />
 
+
     <ScrollView
-        android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"
@@ -189,7 +189,6 @@
                 android:orientation="vertical">
 
                 <HorizontalScrollView
-                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -252,63 +251,30 @@
                     android:scaleType="fitStart"
                     android:src="@drawable/himorher" />
 
-                <HorizontalScrollView
-                    android:scrollbars="none"
-                    android:id="@+id/HorizontlScrollView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="410dp"
-                            android:layout_height="365dp"
-                            android:scaleType="fitStart"
-                            android:src="@drawable/megaendofseason" />
-
-                        <ImageView
-                            android:layout_width="410dp"
-                            android:layout_height="365dp"
-                            android:scaleType="fitStart"
-                            android:src="@drawable/glowupsale" />
-
-                        <ImageView
-                            android:layout_width="410dp"
-                            android:layout_height="365dp"
-                            android:scaleType="fitStart"
-                            android:src="@drawable/maclipstick" />
-
-                        <ImageView
-                            android:layout_width="410dp"
-                            android:layout_height="365dp"
-                            android:scaleType="fitStart"
-                            android:src="@drawable/odelaunchoffer" />
 
 
-                        <ImageView
-                            android:layout_width="410dp"
-                            android:layout_height="365dp"
-                            android:scaleType="fitStart"
-                            android:src="@drawable/mastandharbour" />
 
-                        <ImageView
-                            android:layout_width="410dp"
-                            android:layout_height="365dp"
-                            android:scaleType="fitStart"
-                            android:src="@drawable/lotus" />
 
-                        <ImageView
-                            android:layout_width="410dp"
-                            android:layout_height="365dp"
-                            android:scaleType="fitStart"
-                            android:src="@drawable/innerwear" />
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_centerInParent="true"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorEnabled="true"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#5A5A5A"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="1" />
 
-                    </LinearLayout>
-                </HorizontalScrollView>
+
+
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -324,7 +290,6 @@
                     android:textColor="@color/black" />
 
                 <HorizontalScrollView
-                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -425,7 +390,6 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="20dp"
                     android:layout_marginTop="20dp">
 
                     <ImageView
@@ -466,7 +430,6 @@
                     android:textColor="@color/black" />
 
                 <HorizontalScrollView
-                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -544,7 +507,6 @@
                     android:textColor="@color/black" />
 
                 <HorizontalScrollView
-                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -604,7 +566,6 @@
                     android:textColor="@color/black" />
 
                 <HorizontalScrollView
-                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">

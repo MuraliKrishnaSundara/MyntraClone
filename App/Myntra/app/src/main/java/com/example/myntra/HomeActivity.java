@@ -8,8 +8,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class HomeActivity extends AppCompatActivity {
+import com.smarteist.autoimageslider.SliderView;
 
+import java.util.ArrayList;
+
+public class HomeActivity extends AppCompatActivity {
 
     private ImageView home;
     private ImageView categories;
@@ -17,6 +20,13 @@ public class HomeActivity extends AppCompatActivity {
     private ImageView explore;
     private ImageView profile;
     private TextView tvHome;
+    String url1 = "https://www.linkpicture.com/q/megaendofseason.jpeg";
+    String url2 = "https://www.linkpicture.com/q/glowupsale.jpeg";
+    String url3 = "https://www.linkpicture.com/q/lakme.jpeg";
+    String url4 = "https://www.linkpicture.com/q/odelaunchoffer.jpeg";
+    String url5 = "https://www.linkpicture.com/q/mastandharbour.jpeg";
+    String url6 = "https://www.linkpicture.com/q/lotus.jpeg";
+    String url7 = "https://www.linkpicture.com/q/innerwear.jpeg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +63,24 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ArrayList<AutoScroll1Model> sliderDataArrayList = new ArrayList<>();
+        SliderView sliderView = findViewById(R.id.slider);
+        sliderDataArrayList.add(new AutoScroll1Model(url1));
+        sliderDataArrayList.add(new AutoScroll1Model(url2));
+        sliderDataArrayList.add(new AutoScroll1Model(url3));
+        sliderDataArrayList.add(new AutoScroll1Model(url4));
+        sliderDataArrayList.add(new AutoScroll1Model(url5));
+        sliderDataArrayList.add(new AutoScroll1Model(url6));
+        sliderDataArrayList.add(new AutoScroll1Model(url7));
+        AutoScroll1Adapter adapter = new AutoScroll1Adapter(this, sliderDataArrayList);
+        sliderView.setAutoCycleDirection(SliderView.LAYOUT_DIRECTION_RTL);
+        sliderView.setSliderAdapter(adapter);
+        sliderView.setScrollTimeInSec(3);
+        sliderView.setAutoCycle(true);
+        sliderView.startAutoCycle();
     }
+
 
     private void initViews() {
         home = findViewById(R.id.home);

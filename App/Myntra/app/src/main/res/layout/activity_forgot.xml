@@ -16,52 +16,49 @@
         android:id="@+id/tvResetPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset password"
-        android:textSize="32dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="60dp"
         android:layout_marginLeft="40dp"
-        />
+        android:layout_marginTop="60dp"
+        android:text="Reset password"
+        android:textColor="@color/black"
+        android:textSize="32dp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/hintText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter your email or mobile number so that we will verify your id"
-        android:textSize="15dp"
-        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="40dp"
-        />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email or Mobile Number*"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/rectanglee"
-            android:padding="15dp"
-            />
+        android:layout_marginTop="20dp"
+        android:text="Enter your email or mobile number so that we will verify your id"
+        android:textSize="15dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Last Password Remembered"
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/rectanglee"
+        android:hint="Email or Mobile Number*"
+        android:padding="15dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rectanglee"
+        android:hint="Last Password Remembered"
+        android:padding="15dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rectanglee"
+        android:backgroundTint="#DC143C"
+        android:hint="Last Password Remembered"
         android:padding="15dp"
-        />
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Last Password Remembered"
-    android:layout_marginHorizontal="40dp"
-    android:layout_marginTop="40dp"
-    android:background="@drawable/rectanglee"
-    android:padding="15dp"
-    android:text="Reset Password"
-    android:textColor="@color/white"
-    android:backgroundTint="#DC143C"
-    />
+        android:text="Reset Password"
+        android:textColor="@color/white" />
 </LinearLayout>
