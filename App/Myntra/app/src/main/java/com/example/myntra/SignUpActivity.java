@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AlertDialog;
@@ -22,6 +23,7 @@ public class SignUpActivity extends AppCompatActivity {
     private ArrayList<AccountData> accountList = new ArrayList<>();
     private AccountData accountData;
     private String validEmailCheck = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    private CheckBox tick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,7 @@ public class SignUpActivity extends AppCompatActivity {
         signUpAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validName() && validEmail() && validPhoneNumber() && passwordLength() && passwordMatch()) {
+                if (validName() && validEmail() && validPhoneNumber() && passwordLength() && passwordMatch() && tick.isChecked()) {
                     accountData = new AccountData(name.getText().toString(), email.getText().toString(),
                             phone.getText().toString(), password.getText().toString());
                     accountList.add(accountData);
@@ -59,6 +61,7 @@ public class SignUpActivity extends AppCompatActivity {
         password = findViewById(R.id.signUpPassword);
         rePassword = findViewById(R.id.signUpRePassword);
         signUpAccount = findViewById(R.id.signUpAccount);
+        tick = findViewById(R.id.cbSignUp);
 
     }
 

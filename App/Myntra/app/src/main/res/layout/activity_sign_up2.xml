@@ -79,6 +79,14 @@
         android:hint="Re-enter Password"
         android:padding="10dp" />
 
+    <CheckBox
+        android:id="@+id/cbSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Accept Terms and Conditions"
+        android:textColor="#1B1B1B" />
+
     <Button
         android:id="@+id/signUpAccount"
         android:layout_width="wrap_content"
