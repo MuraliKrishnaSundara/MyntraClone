@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -34,6 +35,7 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
     private RecyclerView rMen;
     private RecyclerView rKid;
     private RecyclerView rGadgets;
+    private ConstraintLayout showGadgets;
     private LinearLayout llgadgets;
     private TextView tvgadgestsLL;
 
@@ -112,12 +114,25 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
                 if (rGadgets.getVisibility() == View.GONE) {
                     rGadgets.setVisibility(View.VISIBLE);
                     //downArrow.setColorFilter(getResources().getColor(R.color.red));
+                    rGadgets.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if (llgadgets.getVisibility() == View.GONE) {
+                                llgadgets.setVisibility(View.VISIBLE);
+                                //downArrow.setColorFilter(getResources().getColor(R.color.red));
+
+                            } else {
+                                llgadgets.setVisibility(View.GONE);
+                            }
+                        }
+                    });
 
                 } else {
                     rGadgets.setVisibility(View.GONE);
                 }
             }
         });
+
 
     }
 
@@ -207,11 +222,12 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
         downArrow = findViewById(R.id.ivCdown);
         llgadgets = findViewById(R.id.llGadgets);
         tvgadgestsLL = findViewById(R.id.tvGadgetsLL);
+        showGadgets = findViewById(R.id.showGadgets);
     }
 
     @Override
     public void ItemClicked(Data data, int position) {
-        Toast.makeText(this, "Item clicked at position " + (position + 1), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Item clicked", Toast.LENGTH_SHORT).show();
     }
 
     @Override
