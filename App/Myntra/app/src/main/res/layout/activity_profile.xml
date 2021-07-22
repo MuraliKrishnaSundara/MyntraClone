@@ -54,7 +54,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="50dp"
-                android:background="@color/white"
+                android:background="@drawable/edittext_bg"
                 android:src="@drawable/person_login" />
 
             <Button
@@ -71,7 +71,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="0dp"
                 android:layout_toRightOf="@+id/ivProfileLogin"
-                android:background="#FF007F"
+                android:background="@color/pink"
                 android:text="LOG IN/SIGN UP"
                 android:textColor="@color/white" />
 

@@ -7,7 +7,6 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 2000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +18,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(splashIntent);
                 finish();
             }
-        }, SPLASH_TIME_OUT);
+        }, 2000);
     }
 }
