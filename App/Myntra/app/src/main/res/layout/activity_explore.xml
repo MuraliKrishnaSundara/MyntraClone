@@ -133,6 +133,311 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"
         app:layout_constraintTop_toBottomOf="@id/topBar">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <View
+                android:id="@+id/vMall"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tvMall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Myntra Mall"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/vMall"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/vMall"
+                android:layout_marginLeft="10dp"
+                android:drawablePadding="20dp"
+                android:drawableLeft="@drawable/bag"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/vMall"
+                android:background="#D3D3D3"
+                />
+
+
+            <View
+                android:id="@+id/vInsider"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toBottomOf="@id/vMall"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <TextView
+                android:id="@+id/tvInsider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/vInsider"
+                app:layout_constraintBottom_toBottomOf="@id/vInsider"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="Myntra Insider"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_insider"
+                android:drawablePadding="20dp"
+
+                />
+            <TextView
+                android:id="@+id/tvEnroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/vInsider"
+                app:layout_constraintBottom_toBottomOf="@id/vInsider"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="15dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:text="ENROLL NOW"
+                android:layout_marginRight="10dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/vInsider"
+                android:background="#D3D3D3"
+                />
+
+            <View
+                android:id="@+id/vGift"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toBottomOf="@id/vInsider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <TextView
+                android:id="@+id/tvGift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/vGift"
+                app:layout_constraintBottom_toBottomOf="@id/vGift"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="Gift Cards"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_gift"
+                android:drawablePadding="20dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/vGift"
+                android:background="#D3D3D3"
+                />
+
+
+            <View
+                android:id="@+id/vEarn"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toBottomOf="@id/vGift"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <TextView
+                android:id="@+id/tvEarn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/vEarn"
+                app:layout_constraintBottom_toBottomOf="@id/vEarn"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="Play and Earn"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_playearn"
+                android:drawablePadding="20dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/vEarn"
+                android:background="#D3D3D3"
+                />
+
+            <View
+                android:id="@+id/vMove"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toBottomOf="@id/vEarn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <TextView
+                android:id="@+id/tvMove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/vMove"
+                app:layout_constraintBottom_toBottomOf="@id/vMove"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="Myntra Move"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_move"
+                android:drawablePadding="20dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/vMove"
+                android:background="#D3D3D3"
+                />
+
+            <View
+                android:id="@+id/vRefer"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toBottomOf="@id/vMove"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <TextView
+                android:id="@+id/tvRefer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/vRefer"
+                app:layout_constraintBottom_toBottomOf="@id/vRefer"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="Refer and Earn"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_refer"
+                android:drawablePadding="20dp"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/vRefer"
+                android:background="#D3D3D3"
+                />
+
+            <View
+                android:id="@+id/vScan"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toBottomOf="@id/vRefer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <TextView
+                android:id="@+id/tvScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/vScan"
+                app:layout_constraintBottom_toBottomOf="@id/vScan"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="Scan for Coupon"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_scan"
+                android:drawablePadding="20dp"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/vScan"
+                android:background="#D3D3D3"
+                />
+
+            <View
+                android:id="@+id/vFashion"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toBottomOf="@id/vScan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <TextView
+                android:id="@+id/tvFashion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/vFashion"
+                app:layout_constraintBottom_toBottomOf="@id/vFashion"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="Myntra Fashion Superstar"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_superstar"
+                android:drawablePadding="20dp"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/vFashion"
+                android:background="#D3D3D3"
+                />
+
+            <View
+                android:id="@+id/vMasterclass"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toBottomOf="@id/vFashion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <TextView
+                android:id="@+id/tvMasterclass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/vMasterclass"
+                app:layout_constraintBottom_toBottomOf="@id/vMasterclass"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="Myntra Masterclass"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_masterclass"
+                android:drawablePadding="20dp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </ScrollView>
