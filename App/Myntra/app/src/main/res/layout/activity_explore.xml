@@ -7,12 +7,14 @@
     tools:context=".ExploreActivity">
 
     <View
+
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/bg"
         app:layout_constraintBottom_toBottomOf="@id/tvExplore"
-        app:layout_constraintTop_toTopOf="@id/tvExplore" />
+        app:layout_constraintTop_toTopOf="@id/tvExplore"
+        />
 
     <TextView
         android:id="@+id/tvExplore"
