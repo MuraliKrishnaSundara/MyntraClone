@@ -38,7 +38,7 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
     private ConstraintLayout showGadgets;
     private LinearLayout llgadgets;
     private TextView tvgadgestsLL;
-
+    private ImageView cart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +74,13 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CategoriesActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CategoriesActivity.this, ShoppingBag.class);
                 startActivity(intent);
             }
         });
@@ -223,6 +230,7 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
         llgadgets = findViewById(R.id.llGadgets);
         tvgadgestsLL = findViewById(R.id.tvGadgetsLL);
         showGadgets = findViewById(R.id.showGadgets);
+        cart = findViewById(R.id.cart);
     }
 
     @Override
