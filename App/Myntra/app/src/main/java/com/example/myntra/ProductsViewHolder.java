@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MensWearViewHolder extends RecyclerView.ViewHolder {
+public class ProductsViewHolder extends RecyclerView.ViewHolder {
 
     private ImageView mIvProductImage;
     private TextView mTvProductName;
@@ -16,7 +16,7 @@ public class MensWearViewHolder extends RecyclerView.ViewHolder {
     private TextView mTvProductCost;
     private RelativeLayout relativeLayout;
 
-    public MensWearViewHolder(@NonNull View itemView) {
+    public ProductsViewHolder(@NonNull View itemView) {
         super(itemView);
         iniViews(itemView);
     }
@@ -29,10 +29,10 @@ public class MensWearViewHolder extends RecyclerView.ViewHolder {
         relativeLayout = itemView.findViewById(R.id.mensWearRelativeLayout);
     }
 
-    public void setData(MensWearData mensWearData) {
-        mIvProductImage.setImageResource(mensWearData.getProductImage());
-        mTvProductName.setText(mensWearData.getProductName());
-        mTvProductType.setText(mensWearData.getProductType());
-        mTvProductCost.setText(mensWearData.getProductCost());
+    public void setData(ProductsData productsData) {
+        mIvProductImage.setImageResource(productsData.getProductImage());
+        mTvProductName.setText(productsData.getProductName());
+        mTvProductType.setText(productsData.getProductType());
+        mTvProductCost.setText(productsData.getProductCost());
     }
 }
