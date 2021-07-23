@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Myntra">
-        <activity android:name=".MensWearActivity"></activity>
+        <activity android:name=".ProductsActivity"></activity>
         <activity android:name=".ForgotActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".Login_Activity" />

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MensWearActivity extends AppCompatActivity {
+public class ProductsActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ArrayList<MensWearData> mensWearDataList;
@@ -16,7 +16,7 @@ public class MensWearActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mens_wear);
+        setContentView(R.layout.activity_products);
         initViews();
         buildIdentityList();
         setRecyclerView();
@@ -71,6 +71,8 @@ public class MensWearActivity extends AppCompatActivity {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(mensWearAdapter);
+
+
     }
 
     private void initViews() {

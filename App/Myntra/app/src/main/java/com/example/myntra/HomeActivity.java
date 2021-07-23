@@ -67,7 +67,7 @@ public class HomeActivity extends AppCompatActivity {
         ivHs1Men.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, MensWearActivity.class);
+                Intent intent = new Intent(HomeActivity.this, ProductsActivity.class);
                 startActivity(intent);
             }
         });
