@@ -29,10 +29,10 @@ public class ProductsViewHolder extends RecyclerView.ViewHolder {
         relativeLayout = itemView.findViewById(R.id.mensWearRelativeLayout);
     }
 
-    public void setData(ProductsData productsData) {
-        mIvProductImage.setImageResource(productsData.getProductImage());
-        mTvProductName.setText(productsData.getProductName());
-        mTvProductType.setText(productsData.getProductType());
-        mTvProductCost.setText(productsData.getProductCost());
+    public void setData(MenData menData) {
+        mIvProductImage.setImageResource(menData.getProductImage());
+        mTvProductName.setText(menData.getProductName());
+        mTvProductType.setText(menData.getProductType());
+        mTvProductCost.setText(menData.getProductCost()+"");
     }
 }

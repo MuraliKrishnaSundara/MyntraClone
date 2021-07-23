@@ -1,12 +1,12 @@
 package com.example.myntra;
 
-public class ProductsData {
+public class MenData {
     private int productImage;
     private String productName;
     private String productType;
-    private String productCost;
+    private int productCost;
 
-    public ProductsData(int image, String name, String type, String cost) {
+    public MenData(int image, String name, String type, int cost) {
         this.productImage = image;
         productName = name;
         productType = type;
@@ -25,7 +25,7 @@ public class ProductsData {
         return productType;
     }
 
-    public String getProductCost() {
+    public int getProductCost() {
         return productCost;
     }
 
