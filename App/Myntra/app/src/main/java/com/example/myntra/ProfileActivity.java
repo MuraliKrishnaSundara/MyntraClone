@@ -26,6 +26,8 @@ public class ProfileActivity extends AppCompatActivity {
     private Button signUp;
     private EditText phoneNumber;
     private TextView profileName;
+    private ImageView profileImage;
+    private View bgView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +109,7 @@ public class ProfileActivity extends AppCompatActivity {
             profileName.setVisibility(View.VISIBLE);
             btn_login_signup.setVisibility(View.GONE);
             profileName.setText(userNameData);
+            bgView.setBackgroundColor(getResources().getColor(R.color.red));
         }
 
     }
@@ -127,6 +130,8 @@ public class ProfileActivity extends AppCompatActivity {
         signUp = findViewById(R.id.signUP);
         phoneNumber = findViewById(R.id.loginPhoneNumber);
         profileName = findViewById(R.id.tvProfileName);
+        bgView = findViewById(R.id.blackView);
+        profileImage = findViewById(R.id.ivProductImage);
     }
 
     private boolean validPhoneNumber() {
