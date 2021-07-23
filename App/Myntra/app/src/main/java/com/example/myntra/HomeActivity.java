@@ -24,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
     private ImageView ivHs1Women;
     private ImageView ivHs1Gadget;
     private ImageView ivHs1Kid;
+    private ImageView cart;
 
     String url1 = "https://www.linkpicture.com/q/megaendofseason.jpeg";
     String url2 = "https://www.linkpicture.com/q/glowupsale.jpeg";
@@ -96,6 +97,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this,ShoppingBag.class);
+                startActivity(intent);
+            }
+        });
 
         ArrayList<AutoScroll1Model> sliderDataArrayList = new ArrayList<>();
         SliderView sliderView = findViewById(R.id.slider);
@@ -126,5 +134,6 @@ public class HomeActivity extends AppCompatActivity {
         ivHs1Women = findViewById(R.id.hs1Women);
         ivHs1Gadget = findViewById(R.id.hs1Gadgets);
         ivHs1Kid = findViewById(R.id.hs1Kids);
+        cart = findViewById(R.id.cart);
     }
 }

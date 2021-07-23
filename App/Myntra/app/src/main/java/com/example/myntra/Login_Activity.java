@@ -24,7 +24,6 @@ public class Login_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
         initViews();
-        String name = PreferenceHelper.getStringFromPreference(Login_Activity.this, "userName");
         String phone = PreferenceHelper.getStringFromPreference(Login_Activity.this, "phone");
         String password = PreferenceHelper.getStringFromPreference(Login_Activity.this, "password");
         loginContinue.setOnClickListener(new View.OnClickListener() {
