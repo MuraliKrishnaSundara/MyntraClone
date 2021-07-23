@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class WomenAdapter extends RecyclerView.Adapter<ProductsViewHolder> {
+public class ProductAdapter extends RecyclerView.Adapter<ProductsViewHolder> {
 
-    private ArrayList<WomenData> womenDataList;
+    private ArrayList<ProductData> productDataList;
 
-    public WomenAdapter(ArrayList<WomenData> womensWearList) {
-        this.womenDataList = womensWearList;
+    public ProductAdapter(ArrayList<ProductData> productList) {
+        this.productDataList = productList;
     }
 
     @NonNull
@@ -26,12 +26,12 @@ public class WomenAdapter extends RecyclerView.Adapter<ProductsViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ProductsViewHolder holder, int position) {
-        WomenData womenData = womenDataList.get(position);
-        holder.setDataWomen(womenData);
+        ProductData productData = productDataList.get(position);
+        holder.setData(productData);
     }
 
     @Override
     public int getItemCount() {
-        return womenDataList.size();
+        return productDataList.size();
     }
 }

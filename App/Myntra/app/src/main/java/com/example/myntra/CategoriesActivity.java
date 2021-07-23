@@ -226,7 +226,7 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
     }
 
     @Override
-    public void ItemClicked(CategoryDataModel catogeryDataModel, int position) {
+    public void ItemClicked(CategoryDataModel categoryDataModel, int position) {
         Toast.makeText(this, "Item clicked", Toast.LENGTH_SHORT).show();
     }
 

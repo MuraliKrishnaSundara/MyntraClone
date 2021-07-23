@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class WomenActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private ArrayList<WomenData> womenDataList;
+    private ArrayList<ProductData> womenProductList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,51 +23,51 @@ public class WomenActivity extends AppCompatActivity {
     }
 
     private void buildIdentityList() {
-        womenDataList = new ArrayList<>();
-        WomenData womenData1 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData1);
-        WomenData womenData2 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData2);
-        WomenData womenData3 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData3);
-        WomenData womenData4 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData4);
-        WomenData womenData5 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData5);
-        WomenData womenData6 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData6);
-        WomenData womenData7 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData7);
-        WomenData womenData8 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData8);
-        WomenData womenData9 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData9);
-        WomenData womenData10 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData10);
-        WomenData womenData11 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData11);
-        WomenData womenData12 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData12);
-        WomenData womenData13 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData13);
-        WomenData womenData14 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData14);
-        WomenData womenData15 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData15);
-        WomenData womenData16 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData16);
-        WomenData womenData17 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData17);
-        WomenData womenData18 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData18);
-        WomenData womenData19 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData19);
-        WomenData womenData20 = new WomenData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
-        womenDataList.add(womenData20);
+        womenProductList = new ArrayList<>();
+        ProductData womenData1 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData1);
+        ProductData womenData2 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData2);
+        ProductData womenData3 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData3);
+        ProductData womenData4 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData4);
+        ProductData womenData5 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData5);
+        ProductData womenData6 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData6);
+        ProductData womenData7 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData7);
+        ProductData womenData8 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData8);
+        ProductData womenData9 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData9);
+        ProductData womenData10 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData10);
+        ProductData womenData11 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData11);
+        ProductData womenData12 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData12);
+        ProductData womenData13 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData13);
+        ProductData womenData14 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData14);
+        ProductData womenData15 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData15);
+        ProductData womenData16 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData16);
+        ProductData womenData17 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData17);
+        ProductData womenData18 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData18);
+        ProductData womenData19 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData19);
+        ProductData womenData20 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        womenProductList.add(womenData20);
     }
 
     private void setRecyclerView() {
-        WomenAdapter womenAdapter = new WomenAdapter(womenDataList);
+        ProductAdapter womenAdapter = new ProductAdapter(womenProductList);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(womenAdapter);

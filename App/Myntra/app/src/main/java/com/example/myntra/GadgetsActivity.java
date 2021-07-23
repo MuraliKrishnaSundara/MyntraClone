@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class GadgetsActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private ArrayList<GadgetsData> gadgetsDataList;
+    private ArrayList<ProductData> gadgetsDataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,18 +24,18 @@ public class GadgetsActivity extends AppCompatActivity {
 
     private void buildIdentityList() {
         gadgetsDataList = new ArrayList<>();
-        GadgetsData womenData1 = new GadgetsData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        ProductData womenData1 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
         gadgetsDataList.add(womenData1);
-        GadgetsData womenData2 = new GadgetsData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        ProductData womenData2 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
         gadgetsDataList.add(womenData2);
-        GadgetsData womenData3 = new GadgetsData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        ProductData womenData3 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
         gadgetsDataList.add(womenData3);
-        GadgetsData womenData4 = new GadgetsData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        ProductData womenData4 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
         gadgetsDataList.add(womenData4);
     }
 
     private void setRecyclerView() {
-        GadgetsAdapter gadgetsAdapter = new GadgetsAdapter(gadgetsDataList);
+        ProductAdapter gadgetsAdapter = new ProductAdapter(gadgetsDataList);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(gadgetsAdapter);

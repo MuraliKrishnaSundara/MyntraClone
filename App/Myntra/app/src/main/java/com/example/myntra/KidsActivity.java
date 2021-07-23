@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class KidsActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private ArrayList<KidsData> kidsDataList;
+    private ArrayList<ProductData> kidsDataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +24,12 @@ public class KidsActivity extends AppCompatActivity {
 
     private void buildIdentityList() {
         kidsDataList = new ArrayList<>();
-        KidsData womenData1 = new KidsData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
+        ProductData womenData1 = new ProductData(R.drawable.mwi1, "Campus Sutra", "Coloured Round Neck", 379);
         kidsDataList.add(womenData1);
     }
 
     private void setRecyclerView() {
-        KidsAdapter kidsAdapter = new KidsAdapter(kidsDataList);
+        ProductAdapter kidsAdapter = new ProductAdapter(kidsDataList);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(kidsAdapter);

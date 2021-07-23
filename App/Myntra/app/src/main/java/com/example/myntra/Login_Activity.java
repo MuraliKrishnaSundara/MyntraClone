@@ -33,7 +33,7 @@ public class Login_Activity extends AppCompatActivity {
                         Intent intent = new Intent(Login_Activity.this, HomeActivity.class);
                         startActivity(intent);
                     }
-                }, 1000);
+                }, 500);
             }
         });
         signUP.setOnClickListener(new View.OnClickListener() {
