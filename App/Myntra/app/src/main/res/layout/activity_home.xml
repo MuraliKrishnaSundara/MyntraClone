@@ -173,6 +173,7 @@
 
 
     <ScrollView
+        android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"
@@ -290,6 +291,7 @@
                     android:textColor="@color/black" />
 
                 <HorizontalScrollView
+                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -390,6 +392,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="20dp"
                     android:layout_marginTop="20dp">
 
                     <ImageView
@@ -430,6 +433,7 @@
                     android:textColor="@color/black" />
 
                 <HorizontalScrollView
+                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -507,6 +511,7 @@
                     android:textColor="@color/black" />
 
                 <HorizontalScrollView
+                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -566,6 +571,7 @@
                     android:textColor="@color/black" />
 
                 <HorizontalScrollView
+                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
