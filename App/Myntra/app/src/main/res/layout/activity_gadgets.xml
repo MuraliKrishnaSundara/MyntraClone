@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudioActivity">
+    tools:context=".GadgetsActivity">
 
     <View
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/bg"
-        app:layout_constraintBottom_toBottomOf="@id/tvTopStudio"
-        app:layout_constraintTop_toTopOf="@id/tvTopStudio" />
+        app:layout_constraintBottom_toBottomOf="@id/tvMyntraFasionStore"
+        app:layout_constraintTop_toTopOf="@id/tvMyntraFasionStore" />
 
     <TextView
-        android:id="@+id/tvTopStudio"
+        android:id="@+id/tvMyntraFasionStore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
@@ -28,34 +28,34 @@
 
 
     <ImageView
-        android:id="@+id/search"
+        android:id="@+id/ivCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:src="@drawable/ic_cart"
-        app:layout_constraintBottom_toBottomOf="@id/tvTopStudio"
+        app:layout_constraintBottom_toBottomOf="@id/tvMyntraFasionStore"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvTopStudio" />
+        app:layout_constraintTop_toTopOf="@id/tvMyntraFasionStore" />
 
     <ImageView
-        android:id="@+id/setting"
+        android:id="@+id/ivWishlist"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_margin="15dp"
         android:src="@drawable/heartblack"
-        app:layout_constraintBottom_toBottomOf="@id/tvTopStudio"
-        app:layout_constraintEnd_toStartOf="@id/search"
-        app:layout_constraintTop_toTopOf="@id/tvTopStudio" />
+        app:layout_constraintBottom_toBottomOf="@id/tvMyntraFasionStore"
+        app:layout_constraintEnd_toStartOf="@id/ivCart"
+        app:layout_constraintTop_toTopOf="@id/tvMyntraFasionStore" />
 
     <ImageView
-        android:id="@+id/bookmark"
+        android:id="@+id/ivSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:src="@drawable/ic_search"
-        app:layout_constraintBottom_toBottomOf="@id/tvTopStudio"
-        app:layout_constraintEnd_toStartOf="@id/setting"
-        app:layout_constraintTop_toTopOf="@id/tvTopStudio" />
+        app:layout_constraintBottom_toBottomOf="@id/tvMyntraFasionStore"
+        app:layout_constraintEnd_toStartOf="@id/ivWishlist"
+        app:layout_constraintTop_toTopOf="@id/tvMyntraFasionStore" />
 
 
     <View
@@ -64,14 +64,14 @@
         android:layout_height="80dp"
         android:background="@drawable/bg"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvMen" />
+        app:layout_constraintTop_toTopOf="@id/tvGadgets" />
 
     <TextView
-        android:id="@+id/tvMen"
+        android:id="@+id/tvGadgets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="MEN"
+        android:text="GADGETS"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/tvSort"
@@ -85,10 +85,10 @@
         android:drawablePadding="10dp"
         android:text="SORT"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/tvMen"
+        app:layout_constraintBottom_toBottomOf="@id/tvGadgets"
         app:layout_constraintEnd_toStartOf="@id/tvFilter"
-        app:layout_constraintStart_toEndOf="@id/tvMen"
-        app:layout_constraintTop_toTopOf="@id/tvMen" />
+        app:layout_constraintStart_toEndOf="@id/tvGadgets"
+        app:layout_constraintTop_toTopOf="@id/tvGadgets" />
 
     <TextView
         android:id="@+id/tvFilter"
@@ -98,13 +98,13 @@
         android:drawablePadding="10dp"
         android:text="FILTER"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@id/tvMen"
+        app:layout_constraintBottom_toBottomOf="@id/tvGadgets"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tvSort"
-        app:layout_constraintTop_toTopOf="@id/tvMen" />
+        app:layout_constraintTop_toTopOf="@id/tvGadgets" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/mensWearRecyclerView"
+        android:id="@+id/gadgetsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"

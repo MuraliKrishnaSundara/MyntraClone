@@ -19,18 +19,18 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".Login_Activity" />
         <activity android:name=".ProfileActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ExploreActivity" />
         <activity android:name=".StudioActivity" />
         <activity android:name=".CategoriesActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

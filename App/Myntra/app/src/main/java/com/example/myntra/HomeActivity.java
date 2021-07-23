@@ -21,6 +21,10 @@ public class HomeActivity extends AppCompatActivity {
     private ImageView profile;
     private TextView tvHome;
     private ImageView ivHs1Men;
+    private ImageView ivHs1Women;
+    private ImageView ivHs1Gadget;
+    private ImageView ivHs1Kid;
+
     String url1 = "https://www.linkpicture.com/q/megaendofseason.jpeg";
     String url2 = "https://www.linkpicture.com/q/glowupsale.jpeg";
     String url3 = "https://www.linkpicture.com/q/lakme.jpeg";
@@ -67,7 +71,28 @@ public class HomeActivity extends AppCompatActivity {
         ivHs1Men.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, ProductsActivity.class);
+                Intent intent = new Intent(HomeActivity.this, MenActivity.class);
+                startActivity(intent);
+            }
+        });
+        ivHs1Women.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, WomenActivity.class);
+                startActivity(intent);
+            }
+        });
+        ivHs1Gadget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, GadgetsActivity.class);
+                startActivity(intent);
+            }
+        });
+        ivHs1Kid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, KidsActivity.class);
                 startActivity(intent);
             }
         });
@@ -98,5 +123,8 @@ public class HomeActivity extends AppCompatActivity {
         profile = findViewById(R.id.profile);
         tvHome = findViewById(R.id.tvCHome);
         ivHs1Men = findViewById(R.id.hs1Men);
+        ivHs1Women = findViewById(R.id.hs1Women);
+        ivHs1Gadget = findViewById(R.id.hs1Gadgets);
+        ivHs1Kid = findViewById(R.id.hs1Kids);
     }
 }

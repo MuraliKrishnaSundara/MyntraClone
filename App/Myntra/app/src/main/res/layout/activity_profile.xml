@@ -67,6 +67,7 @@
                 android:layout_toRightOf="@id/ivProfileLogin"
                 android:text="Name"
                 android:gravity="center"
+                android:textAllCaps="true"
                 android:textColor="@color/red"
                 android:textSize="24sp"
                 android:visibility="gone" />
