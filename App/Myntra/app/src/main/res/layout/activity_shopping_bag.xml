@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShoppingBag">
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvShoppingBag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="SHOPPING BAG"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawableLeft="@drawable/ic_back"
+        android:textSize="16dp"
+        android:drawablePadding="20dp"/>
+    <ImageView
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_like"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="13dp"
+        />
+    <View
+        android:id="@+id/vLine1"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v1"
+        android:background="#d3d3d3"
+        />
+    <View
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vLine1"
+        />
+    <TextView
+        android:id="@+id/tvCheckDeliveryTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Check delivery time and Services"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v2"
+        app:layout_constraintBottom_toBottomOf="@+id/v2"
+        android:textSize="14sp"
+        android:drawablePadding="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v2"
+        app:layout_constraintBottom_toBottomOf="@id/v2"
+        android:text="ENTER PIN CODE"
+        android:textSize="14sp"
+        android:textColor="#FF007F"
+        android:layout_marginRight="13dp"
+        android:textStyle="bold"
+        />
+    <View
+        android:id="@+id/vLine2"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v2"
+        android:background="#d3d3d3"
+        />
+
+    <View
+        android:id="@+id/v3"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vLine2"
+        />
+
+    <TextView
+        android:id="@+id/tvAvailableOffers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Availabale Offers"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v3"
+        android:textSize="14sp"
+        android:drawablePadding="20dp"
+        android:drawableLeft="@drawable/ic_offer"/>
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="10% Instant Discount on RBL Bank Credit and Debit Cards on aminimum spend of Rs 2,500 TCA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAvailableOffers"
+        android:layout_marginVertical="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="30dp"
+        android:textSize="13dp"
+
+        />
+
+    <TextView
+        android:id="@+id/tvShowMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Show More "
+        android:textStyle="bold"
+        android:textColor="#FF007F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDesc"
+        android:textSize="14sp"
+        android:layout_marginLeft="25dp"/>
+    <View
+        android:id="@+id/vLine3"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v3"
+        android:background="#d3d3d3"
+        />
+
+    <View
+        android:id="@+id/v4"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vLine3"
+        android:background="@android:color/darker_gray"
+        />
+
+    <TextView
+        android:id="@+id/tvItemCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="1 ITEM "
+
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v4"
+        app:layout_constraintBottom_toBottomOf="@id/v4"
+        android:textSize="17sp"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Total: 900 "
+        android:drawableRight="@drawable/ic_rupee"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v4"
+        app:layout_constraintBottom_toBottomOf="@id/v4"
+        android:textSize="17sp"
+        android:layout_marginLeft="25dp"/>
+    <View
+        android:id="@+id/v5"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v4"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/v5"
+        app:layout_constraintBottom_toBottomOf="@id/v5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/puma"
+        android:layout_marginLeft="30dp"
+    />
+    <TextView
+        android:id="@+id/tvPuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v5"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvDesc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unisex Black Solid Baseball Cap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPuma"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvSoldby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sold by: Puma Sports In..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDesc1"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="5dp"
+        android:textSize="13dp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 450"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSoldby"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"
+        android:drawableLeft="@drawable/ic_rupee"
+        />
+    <TextView
+        android:id="@+id/tvDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50% OFF"
+        app:layout_constraintStart_toEndOf="@id/tvPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvSoldby"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="18dp"
+        android:textColor="#FF007F"/>
+    <View
+        android:id="@+id/vLine4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v5"
+        android:background="#d3d3d3"
+        />
+
+    <View
+        android:id="@+id/v6"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vLine4"
+        />
+
+    <TextView
+        android:id="@+id/tvRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="REMOVE"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v6"
+        app:layout_constraintBottom_toBottomOf="@id/v6"
+        android:textSize="17sp"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:id="@+id/tvMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="MOVE TO WISHLIST"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v6"
+        app:layout_constraintBottom_toBottomOf="@id/v6"
+        android:textSize="17sp"
+        android:layout_marginLeft="25dp"/>
+
+    <View
+        android:id="@+id/vLine5"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v6"
+        android:background="#d3d3d3"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vLine5"
+        android:padding="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:text="PLACE ORDER"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:backgroundTint="#FF007F"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
