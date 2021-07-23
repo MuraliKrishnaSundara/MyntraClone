@@ -26,7 +26,6 @@ public class SignUpActivity extends AppCompatActivity {
     private AccountData accountData;
     private String validEmailCheck = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private CheckBox tick;
-    private IsLoggedIn isLoggedIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,22 +39,23 @@ public class SignUpActivity extends AppCompatActivity {
                     accountData = new AccountData(name.getText().toString(), email.getText().toString(),
                             phone.getText().toString(), password.getText().toString());
                     accountList.add(accountData);
+                    PreferenceHelper.writeStringToPreference(SignUpActivity.this, "userName", name.getText().toString());
+                    PreferenceHelper.writeStringToPreference(SignUpActivity.this, "email", email.getText().toString());
+                    PreferenceHelper.writeStringToPreference(SignUpActivity.this, "phone", phone.getText().toString());
+                    PreferenceHelper.writeStringToPreference(SignUpActivity.this, "password", password.getText().toString());
+
                     new AlertDialog.Builder(SignUpActivity.this).setMessage("Account Successfully Created").show();
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             Intent intent = new Intent(SignUpActivity.this, ProfileActivity.class);
-                            intent.putExtra("name", name.getText().toString());
-
                             startActivity(intent);
                         }
                     }, 500);
 
-
                 }
             }
         });
-
 
     }
 

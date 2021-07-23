@@ -47,6 +47,15 @@
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/rectanglee"
+        android:hint="Email ID"
+        android:padding="15dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rectanglee"
         android:hint="Last Password Remembered"
         android:padding="15dp" />
 

@@ -18,22 +18,28 @@ public class Login_Activity extends AppCompatActivity {
     private TextView loginPhoneNumber;
     private EditText loginPassword;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
         initViews();
+        String name = PreferenceHelper.getStringFromPreference(Login_Activity.this, "userName");
+        String phone = PreferenceHelper.getStringFromPreference(Login_Activity.this, "phone");
+        String password = PreferenceHelper.getStringFromPreference(Login_Activity.this, "password");
         loginContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new AlertDialog.Builder(Login_Activity.this).setMessage("Login Successful").show();
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(Login_Activity.this, HomeActivity.class);
-                        startActivity(intent);
-                    }
-                }, 1000);
+                if (loginPhoneNumber.getText().toString().equals(phone) && passwordCheck(password)) {
+                    new AlertDialog.Builder(Login_Activity.this).setMessage("Login Successful").show();
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(Login_Activity.this, ProfileActivity.class);
+                            startActivity(intent);
+                        }
+                    }, 500);
+                }
             }
         });
         signUP.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +56,15 @@ public class Login_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private boolean passwordCheck(String password) {
+        if (loginPassword.getText().toString().equals(password)) {
+            return true;
+        } else {
+            loginPassword.setError("Password Wrong");
+            return false;
+        }
     }
 
     private void initViews() {
