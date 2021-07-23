@@ -27,10 +27,10 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
     private ImageView men;
     private ImageView kid;
     private ImageView gadgets;
-    private ArrayList<Data> womenList = new ArrayList<>();
-    private ArrayList<Data> menList = new ArrayList<>();
-    private ArrayList<Data> kidList = new ArrayList<>();
-    private ArrayList<Data> gadgetsList = new ArrayList<>();
+    private ArrayList<CategoryDataModel> womenList = new ArrayList<>();
+    private ArrayList<CategoryDataModel> menList = new ArrayList<>();
+    private ArrayList<CategoryDataModel> kidList = new ArrayList<>();
+    private ArrayList<CategoryDataModel> gadgetsList = new ArrayList<>();
     private RecyclerView rWomen;
     private RecyclerView rMen;
     private RecyclerView rKid;
@@ -160,48 +160,48 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
     }
 
     private void buildData() {
-        womenList.add(new Data("Westernwear"));
-        womenList.add(new Data("Ethnic & Fusionwear"));
-        womenList.add(new Data("Footwear"));
-        womenList.add(new Data("Lingerie"));
-        womenList.add(new Data("Bags, Wallets & Clutches"));
-        womenList.add(new Data("Jewellery"));
-        womenList.add(new Data("Other Accessories"));
-        womenList.add(new Data("Beauty & Personal Care"));
-        womenList.add(new Data("Sports & Activewear"));
-        womenList.add(new Data("Luggage & Trolleys"));
-        womenList.add(new Data("Watches"));
-        womenList.add(new Data("Myntra StyleCast"));
-        womenList.add(new Data("Winterwear Store"));
-        womenList.add(new Data("Gift Card"));
+        womenList.add(new CategoryDataModel("Westernwear"));
+        womenList.add(new CategoryDataModel("Ethnic & Fusionwear"));
+        womenList.add(new CategoryDataModel("Footwear"));
+        womenList.add(new CategoryDataModel("Lingerie"));
+        womenList.add(new CategoryDataModel("Bags, Wallets & Clutches"));
+        womenList.add(new CategoryDataModel("Jewellery"));
+        womenList.add(new CategoryDataModel("Other Accessories"));
+        womenList.add(new CategoryDataModel("Beauty & Personal Care"));
+        womenList.add(new CategoryDataModel("Sports & Activewear"));
+        womenList.add(new CategoryDataModel("Luggage & Trolleys"));
+        womenList.add(new CategoryDataModel("Watches"));
+        womenList.add(new CategoryDataModel("Myntra StyleCast"));
+        womenList.add(new CategoryDataModel("Winterwear Store"));
+        womenList.add(new CategoryDataModel("Gift Card"));
 
-        menList.add(new Data("Top wear"));
-        menList.add(new Data("Ethnic & Fusionwear"));
-        menList.add(new Data("Footwear"));
-        menList.add(new Data("Innerwear"));
-        menList.add(new Data("Bags, Wallets & Clutches"));
-        menList.add(new Data("Sports and Activewwear"));
-        menList.add(new Data("Other Accessories"));
-        menList.add(new Data("Personal Care"));
-        menList.add(new Data("Sports & Activewear"));
-        menList.add(new Data("Luggage & Trolleys"));
-        menList.add(new Data("Watches"));
-        menList.add(new Data("Myntra StyleCast"));
-        menList.add(new Data("Winterwear Store"));
-        menList.add(new Data("Gift Card"));
+        menList.add(new CategoryDataModel("Top wear"));
+        menList.add(new CategoryDataModel("Ethnic & Fusionwear"));
+        menList.add(new CategoryDataModel("Footwear"));
+        menList.add(new CategoryDataModel("Innerwear"));
+        menList.add(new CategoryDataModel("Bags, Wallets & Clutches"));
+        menList.add(new CategoryDataModel("Sports and Activewwear"));
+        menList.add(new CategoryDataModel("Other Accessories"));
+        menList.add(new CategoryDataModel("Personal Care"));
+        menList.add(new CategoryDataModel("Sports & Activewear"));
+        menList.add(new CategoryDataModel("Luggage & Trolleys"));
+        menList.add(new CategoryDataModel("Watches"));
+        menList.add(new CategoryDataModel("Myntra StyleCast"));
+        menList.add(new CategoryDataModel("Winterwear Store"));
+        menList.add(new CategoryDataModel("Gift Card"));
 
-        kidList.add(new Data("Explore kid store"));
-        kidList.add(new Data("Girls clothing"));
-        kidList.add(new Data("Footwear"));
-        kidList.add(new Data("Girls Footwear"));
-        kidList.add(new Data("Toys"));
-        kidList.add(new Data("Boys Clothing"));
-        kidList.add(new Data("Bags & Accessories"));
-        kidList.add(new Data("Masks"));
+        kidList.add(new CategoryDataModel("Explore kid store"));
+        kidList.add(new CategoryDataModel("Girls clothing"));
+        kidList.add(new CategoryDataModel("Footwear"));
+        kidList.add(new CategoryDataModel("Girls Footwear"));
+        kidList.add(new CategoryDataModel("Toys"));
+        kidList.add(new CategoryDataModel("Boys Clothing"));
+        kidList.add(new CategoryDataModel("Bags & Accessories"));
+        kidList.add(new CategoryDataModel("Masks"));
 
-        gadgetsList.add(new Data("Smart Wearables"));
-        gadgetsList.add(new Data("Audio & Hearables"));
-        gadgetsList.add(new Data("Mobile Accessories"));
+        gadgetsList.add(new CategoryDataModel("Smart Wearables"));
+        gadgetsList.add(new CategoryDataModel("Audio & Hearables"));
+        gadgetsList.add(new CategoryDataModel("Mobile Accessories"));
     }
 
     private void initViews() {
@@ -226,7 +226,7 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
     }
 
     @Override
-    public void ItemClicked(Data data, int position) {
+    public void ItemClicked(CategoryDataModel catogeryDataModel, int position) {
         Toast.makeText(this, "Item clicked", Toast.LENGTH_SHORT).show();
     }
 

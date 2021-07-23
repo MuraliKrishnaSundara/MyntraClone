@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryViewHolder> {
-    private ArrayList<Data> demoList;
+    private ArrayList<CategoryDataModel> demoList;
     private ItemClickListener itemClickListener;
 
-    public CategoryAdapter(ArrayList<Data> demoList, ItemClickListener itemClickListener) {
+    public CategoryAdapter(ArrayList<CategoryDataModel> demoList, ItemClickListener itemClickListener) {
         this.demoList = demoList;
         this.itemClickListener = itemClickListener;
     }
@@ -27,8 +27,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
-        Data data = demoList.get(position);
-        holder.setData(data);
+        CategoryDataModel catogeryDataModel = demoList.get(position);
+        holder.setData(catogeryDataModel);
     }
 
     @Override

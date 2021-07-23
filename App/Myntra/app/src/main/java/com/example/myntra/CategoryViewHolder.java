@@ -21,7 +21,7 @@ public class CategoryViewHolder extends RecyclerView.ViewHolder {
         text = itemView.findViewById(R.id.tvCtext);
     }
 
-    public void setData(Data data) {
-        text.setText(data.getText());
+    public void setData(CategoryDataModel categoryDataModel) {
+        text.setText(categoryDataModel.getText());
     }
 }

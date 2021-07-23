@@ -25,6 +25,8 @@ public class ProfileActivity extends AppCompatActivity {
     private Button forgot;
     private Button signUp;
     private EditText phoneNumber;
+    private TextView profileName;
+    private IsLoggedIn isLoggedIn = new IsLoggedIn(false);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +101,15 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        if (true) {
+            profileName.setVisibility(View.VISIBLE);
+            btn_login_signup.setVisibility(View.GONE);
+        }
+//        if (profileName.getText().toString().length() > 2) {
+//
+//        }
     }
+
 
     private void initViews() {
         home = findViewById(R.id.myntraLogo);
@@ -115,6 +125,8 @@ public class ProfileActivity extends AppCompatActivity {
         forgot = findViewById(R.id.forgotPassword);
         signUp = findViewById(R.id.signUP);
         phoneNumber = findViewById(R.id.loginPhoneNumber);
+        profileName = findViewById(R.id.tvProfileName);
+        profileName.setText(getIntent().getStringExtra("name"));
     }
 
     private boolean validPhoneNumber() {

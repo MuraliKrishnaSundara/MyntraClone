@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/edittext_bg"
+        android:background="@drawable/rectanglee"
         android:gravity="center"
         android:hint="Enter Name"
         android:padding="10dp" />
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/edittext_bg"
+        android:background="@drawable/rectanglee"
         android:gravity="center"
         android:hint="Enter email Id"
         android:padding="10dp" />
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/edittext_bg"
+        android:background="@drawable/rectanglee"
         android:gravity="center"
         android:hint="Enter Phone Number"
         android:inputType="number"
@@ -62,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/edittext_bg"
+        android:background="@drawable/rectanglee"
         android:gravity="center"
         android:hint="Enter Password"
         android:inputType="textPassword"
@@ -74,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="@drawable/edittext_bg"
+        android:background="@drawable/rectanglee"
         android:gravity="center"
         android:hint="Re-enter Password"
         android:padding="10dp" />
@@ -83,9 +83,18 @@
         android:id="@+id/cbSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
         android:text="Accept Terms and Conditions"
         android:textColor="#1B1B1B" />
+
+    <TextView
+        android:id="@+id/agreePermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Agree Terms and Conditions to Continue"
+        android:textColor="@color/red"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/signUpAccount"

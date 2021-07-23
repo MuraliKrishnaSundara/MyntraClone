@@ -1,9 +1,9 @@
 package com.example.myntra;
 
-public class Data {
+public class CategoryDataModel {
     private String text;
 
-    public Data(String text) {
+    public CategoryDataModel(String text) {
         this.text = text;
     }
 

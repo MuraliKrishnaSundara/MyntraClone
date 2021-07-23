@@ -57,6 +57,7 @@
                 android:background="@drawable/edittext_bg"
                 android:src="@drawable/person_login" />
 
+
             <TextView
                 android:id="@+id/tvProfileName"
                 android:layout_width="wrap_content"
@@ -65,12 +66,16 @@
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/ivProfileLogin"
                 android:text="Name"
-                android:textColor="@color/black" />
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:textSize="24sp"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btnLogin_Signup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="visible"
                 android:layout_below="@id/blackView"
                 android:layout_alignBottom="@+id/ivProfileLogin"
                 android:layout_alignParentRight="true"
@@ -85,12 +90,11 @@
                 android:text="LOG IN/SIGN UP"
                 android:textColor="@color/white" />
 
-
             <View
                 android:id="@+id/ordersBar"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_below="@id/btnLogin_Signup"
+                android:layout_below="@id/ivProfileLogin"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/bg" />
 

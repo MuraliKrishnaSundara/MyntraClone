@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,10 +21,12 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText password;
     private EditText rePassword;
     private Button signUpAccount;
+    private TextView agreePermission;
     private ArrayList<AccountData> accountList = new ArrayList<>();
     private AccountData accountData;
     private String validEmailCheck = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private CheckBox tick;
+    private IsLoggedIn isLoggedIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +36,7 @@ public class SignUpActivity extends AppCompatActivity {
         signUpAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validName() && validEmail() && validPhoneNumber() && passwordLength() && passwordMatch() && tick.isChecked()) {
+                if (validName() && validEmail() && validPhoneNumber() && passwordLength() && passwordMatch() && isClicked()) {
                     accountData = new AccountData(name.getText().toString(), email.getText().toString(),
                             phone.getText().toString(), password.getText().toString());
                     accountList.add(accountData);
@@ -42,9 +45,11 @@ public class SignUpActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             Intent intent = new Intent(SignUpActivity.this, ProfileActivity.class);
+                            intent.putExtra("name", name.getText().toString());
+
                             startActivity(intent);
                         }
-                    }, 1000);
+                    }, 500);
 
 
                 }
@@ -62,6 +67,7 @@ public class SignUpActivity extends AppCompatActivity {
         rePassword = findViewById(R.id.signUpRePassword);
         signUpAccount = findViewById(R.id.signUpAccount);
         tick = findViewById(R.id.cbSignUp);
+        agreePermission = findViewById(R.id.agreePermission);
 
     }
 
@@ -107,5 +113,14 @@ public class SignUpActivity extends AppCompatActivity {
             return false;
         }
         return true;
+    }
+
+    private boolean isClicked() {
+        if (tick.isChecked()) {
+            return true;
+        } else {
+            agreePermission.setVisibility(View.VISIBLE);
+            return false;
+        }
     }
 }
