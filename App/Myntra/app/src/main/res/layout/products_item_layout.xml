@@ -4,7 +4,7 @@
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:id="@+id/mensWearRelativeLayout"
+        android:id="@+id/ProductRelativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

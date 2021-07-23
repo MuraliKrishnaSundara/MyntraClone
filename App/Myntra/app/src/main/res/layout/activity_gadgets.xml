@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenActivity">
+    tools:context=".GadgetsActivity">
 
     <View
         android:id="@+id/topBar"
@@ -71,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="MEN"
+        android:text="GADGETS"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/tvSort"
@@ -104,7 +104,7 @@
         app:layout_constraintTop_toTopOf="@id/tvGadgets" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/mensWearRecyclerView"
+        android:id="@+id/gadgetsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"

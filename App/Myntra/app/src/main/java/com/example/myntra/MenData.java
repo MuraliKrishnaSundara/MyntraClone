@@ -1,32 +1,32 @@
 package com.example.myntra;
 
 public class MenData {
-    private int productImage;
-    private String productName;
-    private String productType;
-    private int productCost;
+    private int mensWearImage;
+    private String mensWearName;
+    private String mensWearType;
+    private int mensWearCost;
 
     public MenData(int image, String name, String type, int cost) {
-        this.productImage = image;
-        productName = name;
-        productType = type;
-        productCost = cost;
+        this.mensWearImage = image;
+        mensWearName = name;
+        mensWearType = type;
+        mensWearCost = cost;
     }
 
-    public int getProductImage() {
-        return productImage;
+    public int getMensWearImage() {
+        return mensWearImage;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getMensWearName() {
+        return mensWearName;
     }
 
-    public String getProductType() {
-        return productType;
+    public String getMensWearType() {
+        return mensWearType;
     }
 
-    public int getProductCost() {
-        return productCost;
+    public int getMensWearCost() {
+        return mensWearCost;
     }
 
 }

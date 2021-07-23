@@ -26,13 +26,36 @@ public class ProductsViewHolder extends RecyclerView.ViewHolder {
         mTvProductName = itemView.findViewById(R.id.tvProductName);
         mTvProductType = itemView.findViewById(R.id.tvProductType);
         mTvProductCost = itemView.findViewById(R.id.tvProductCost);
-        relativeLayout = itemView.findViewById(R.id.mensWearRelativeLayout);
+        relativeLayout = itemView.findViewById(R.id.ProductRelativeLayout);
     }
 
-    public void setData(MenData menData) {
-        mIvProductImage.setImageResource(menData.getProductImage());
-        mTvProductName.setText(menData.getProductName());
-        mTvProductType.setText(menData.getProductType());
-        mTvProductCost.setText(menData.getProductCost()+"");
+
+    public void setDataMen(MenData menData) {
+        mIvProductImage.setImageResource(menData.getMensWearImage());
+        mTvProductName.setText(menData.getMensWearName());
+        mTvProductType.setText(menData.getMensWearType());
+        mTvProductCost.setText(menData.getMensWearCost() + "");
+    }
+
+    public void setDataWomen(WomenData womenData) {
+        mIvProductImage.setImageResource(womenData.getWomensWearImage());
+        mTvProductName.setText(womenData.getWomensWearName());
+        mTvProductType.setText(womenData.getWomensWearType());
+        mTvProductCost.setText(womenData.getWomensWearCost() + "");
+    }
+
+    public void setDataGadgets(GadgetsData gadgetsData) {
+        mIvProductImage.setImageResource(gadgetsData.getGadgetsWearImage());
+        mTvProductName.setText(gadgetsData.getGadgetsWearName());
+        mTvProductType.setText(gadgetsData.getGadgetsWearType());
+        mTvProductCost.setText(gadgetsData.getGadgetsWearCost() + "");
+    }
+
+    public void setDataKids(KidsData kidsData) {
+        mIvProductImage.setImageResource(kidsData.getKidsWearImage());
+        mTvProductName.setText(kidsData.getKidsWearName());
+        mTvProductType.setText(kidsData.getKidsWearType());
+        mTvProductCost.setText(kidsData.getKidsWearCost() + "");
+
     }
 }

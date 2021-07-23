@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Myntra">
-        <activity android:name=".MenActivity"></activity>
+        <activity android:name=".KidsActivity"></activity>
+        <activity android:name=".GadgetsActivity" />
+        <activity android:name=".WomenActivity" />
+        <activity android:name=".MenActivity" />
         <activity android:name=".ForgotActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".Login_Activity" />
