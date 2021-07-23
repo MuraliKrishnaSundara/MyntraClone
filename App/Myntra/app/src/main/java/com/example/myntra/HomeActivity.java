@@ -20,6 +20,7 @@ public class HomeActivity extends AppCompatActivity {
     private ImageView explore;
     private ImageView profile;
     private TextView tvHome;
+    private ImageView ivHs1Men;
     String url1 = "https://www.linkpicture.com/q/megaendofseason.jpeg";
     String url2 = "https://www.linkpicture.com/q/glowupsale.jpeg";
     String url3 = "https://www.linkpicture.com/q/lakme.jpeg";
@@ -63,6 +64,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ivHs1Men.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ProductsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         ArrayList<AutoScroll1Model> sliderDataArrayList = new ArrayList<>();
         SliderView sliderView = findViewById(R.id.slider);
@@ -89,5 +97,6 @@ public class HomeActivity extends AppCompatActivity {
         explore = findViewById(R.id.explore);
         profile = findViewById(R.id.profile);
         tvHome = findViewById(R.id.tvCHome);
+        ivHs1Men = findViewById(R.id.hs1Men);
     }
 }
