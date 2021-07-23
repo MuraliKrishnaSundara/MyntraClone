@@ -64,7 +64,7 @@
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/v2"
-        app:layout_constraintBottom_toBottomOf="v2"
+        app:layout_constraintBottom_toBottomOf="@id/v2"
         android:textSize="14sp"
         android:drawablePadding="20dp"/>
 
@@ -108,10 +108,11 @@
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/v3"
-        app:layout_constraintBottom_toBottomOf="v3"
+        app:layout_constraintBottom_toBottomOf="@id/v3"
         android:textSize="14sp"
         android:drawablePadding="20dp"
-        android:drawableLeft="@drawable/ic_offer"/>
+        android:drawableLeft="@drawable/ic_offer"
+        />
 
     <TextView
         android:id="@+id/tvDesc"
@@ -137,7 +138,7 @@
         android:textColor="#FF007F"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvDesc"
-        app:layout_constraintBottom_toBottomOf="v3"
+        app:layout_constraintBottom_toBottomOf="@id/v3"
         android:textSize="14sp"
         android:layout_marginLeft="25dp"/>
     <View
