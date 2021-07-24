@@ -34,6 +34,7 @@ public class HomeActivity extends AppCompatActivity {
     private View menuCategoriesBar;
     private View themeStoreBar;
     private LinearLayout menuScreen;
+    private ImageView wishList;
 
     String url1 = "https://www.linkpicture.com/q/megaendofseason.jpeg";
     String url2 = "https://www.linkpicture.com/q/glowupsale.jpeg";
@@ -51,20 +52,6 @@ public class HomeActivity extends AppCompatActivity {
         home.setColorFilter(getResources().getColor(R.color.red));
         tvHome.setTextColor(getResources().getColor(R.color.red));
         categories.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, CategoriesActivity.class);
-                startActivity(intent);
-            }
-        });
-        menuCategoriesBar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, CategoriesActivity.class);
-                startActivity(intent);
-            }
-        });
-        themeStoreBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, CategoriesActivity.class);
@@ -89,13 +76,6 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
-                startActivity(intent);
-            }
-        });
-        bgBlack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, Login_Activity.class);
                 startActivity(intent);
             }
         });
@@ -148,6 +128,13 @@ public class HomeActivity extends AppCompatActivity {
                 menuScreen.setVisibility(View.GONE);
             }
         });
+        wishList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, WishlistActivity.class);
+                startActivity(intent);
+            }
+        });
 
         ArrayList<AutoScroll1Model> sliderDataArrayList = new ArrayList<>();
         SliderView sliderView = findViewById(R.id.slider);
@@ -188,6 +175,7 @@ public class HomeActivity extends AppCompatActivity {
         ivHs1Gadget = findViewById(R.id.hs1Gadgets);
         ivHs1Kid = findViewById(R.id.hs1Kids);
         cart = findViewById(R.id.cart);
+        wishList = findViewById(R.id.favourite);
         menuBar = findViewById(R.id.dehaze);
         closeMenu = findViewById(R.id.closeMenu);
         menuScreen = findViewById(R.id.menuScreen);
