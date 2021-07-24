@@ -107,6 +107,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         } else {
             profileName.setVisibility(View.VISIBLE);
+            PreferenceHelper.writeIntToPreference(ProfileActivity.this, "added", 0);
             btn_login_signup.setVisibility(View.GONE);
             profileName.setText(userNameData);
             bgView.setBackgroundColor(getResources().getColor(R.color.red));

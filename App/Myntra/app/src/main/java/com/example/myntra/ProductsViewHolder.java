@@ -20,17 +20,16 @@ public class ProductsViewHolder extends RecyclerView.ViewHolder {
     public ProductsViewHolder(@NonNull View itemView, OnProductClick onProductClick) {
         super(itemView);
         this.onProductClick = onProductClick;
-        iniViews(itemView);
+        initViews(itemView);
     }
 
-    private void iniViews(View itemView) {
+    private void initViews(View itemView) {
         mIvProductImage = itemView.findViewById(R.id.ivProductImage);
         mTvProductName = itemView.findViewById(R.id.tvProductName);
         mTvProductType = itemView.findViewById(R.id.tvProductType);
         mTvProductCost = itemView.findViewById(R.id.tvProductCost);
         relativeLayout = itemView.findViewById(R.id.ProductRelativeLayout);
     }
-
 
     public void setData(ProductData productData) {
         mIvProductImage.setImageResource(productData.getProductImage());

@@ -29,9 +29,28 @@ public class ProductDetailedView extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(ProductDetailedView.this, "Added to WishList", Toast.LENGTH_SHORT).show();
+                PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "wproductName", productName.getText().toString());
+                PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "wproductCompany", productCompanyName.getText().toString());
+                PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "wsize", "S");
+                PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "wproductPrice", Integer.parseInt(productPrice.getText().toString()));
+                PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "wproductImage", getIntent().getIntExtra("image", R.drawable.image_1));
+            }
+        });
+        btnAddToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ProductDetailedView.this, "Added to Cart", Toast.LENGTH_SHORT).show();
+                PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "productName", productName.getText().toString());
+                PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "productCompany", productCompanyName.getText().toString());
+                PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "size", "S");
+                PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "productPrice", Integer.parseInt(productPrice.getText().toString()));
+                PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "productImage", getIntent().getIntExtra("image", R.drawable.image_1));
+                PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "added", 1);
+
             }
         });
     }
+
 
     private void setData() {
         productImage.setImageResource((getIntent().getIntExtra("image", R.drawable.image_1)));
