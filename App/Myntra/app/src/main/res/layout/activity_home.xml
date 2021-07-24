@@ -275,7 +275,7 @@
                     app:sliderIndicatorRadius="2dp"
                     app:sliderIndicatorSelectedColor="#5A5A5A"
                     app:sliderIndicatorUnselectedColor="#FFF"
-                    app:sliderScrollTimeInSec="1"/>
+                    app:sliderScrollTimeInSec="1" />
 
 
                 <ImageView
@@ -721,6 +721,7 @@
                 android:textStyle="bold" />
 
             <ImageView
+                android:id="@+id/menuArrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/menuProfile"
@@ -729,7 +730,6 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="206dp"
                 android:src="@drawable/arrow_right" />
-
 
             <ImageView
                 android:id="@+id/closeMenu"
@@ -864,6 +864,5 @@
         </RelativeLayout>
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,6 +28,8 @@ public class HomeActivity extends AppCompatActivity {
     private ImageView cart;
     private ImageView menuBar;
     private ImageView closeMenu;
+    private ImageView menuArrow;
+    private TextView loginSignUp;
     private View bgBlack;
     private View menuCategoriesBar;
     private View themeStoreBar;
@@ -162,6 +164,15 @@ public class HomeActivity extends AppCompatActivity {
         sliderView.setScrollTimeInSec(3);
         sliderView.setAutoCycle(true);
         sliderView.startAutoCycle();
+
+        String userNameData = PreferenceHelper.getStringFromPreference(HomeActivity.this, "userName");
+        if (userNameData.equals("")) {
+
+        } else {
+            menuArrow.setVisibility(View.GONE);
+            loginSignUp.setText(userNameData);
+            bgBlack.setBackgroundColor(getResources().getColor(R.color.red));
+        }
     }
 
 
@@ -183,5 +194,7 @@ public class HomeActivity extends AppCompatActivity {
         menuCategoriesBar = findViewById(R.id.menuCategoriesBar);
         themeStoreBar = findViewById(R.id.themeStoreBar);
         bgBlack = findViewById(R.id.bgBlack);
+        menuArrow = findViewById(R.id.menuArrow);
+        loginSignUp = findViewById(R.id.Login_SignUp);
     }
 }
