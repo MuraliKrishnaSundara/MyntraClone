@@ -24,6 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -173,9 +174,9 @@
 
 
     <ScrollView
-        android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"
         app:layout_constraintTop_toBottomOf="@id/topBar">
 
@@ -190,11 +191,11 @@
                 android:orientation="vertical">
 
                 <HorizontalScrollView
-                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:scrollbars="none">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -291,10 +292,10 @@
                     android:textColor="@color/black" />
 
                 <HorizontalScrollView
-                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -392,8 +393,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:padding="20dp">
 
                     <ImageView
                         android:id="@+id/ivFlipFlops"
@@ -433,10 +434,10 @@
                     android:textColor="@color/black" />
 
                 <HorizontalScrollView
-                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView4"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -511,10 +512,10 @@
                     android:textColor="@color/black" />
 
                 <HorizontalScrollView
-                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView5"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -571,10 +572,10 @@
                     android:textColor="@color/black" />
 
                 <HorizontalScrollView
-                    android:scrollbars="none"
                     android:id="@+id/HorizontlScrollView6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -675,5 +676,217 @@
 
         </androidx.cardview.widget.CardView>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/menuScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/edittext_bg"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/bgBlack"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/black" />
+
+            <ImageView
+                android:id="@+id/menuProfile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@id/bgBlack"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/profilem" />
+
+            <TextView
+                android:id="@+id/Login.SignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/menuProfile"
+                android:layout_marginLeft="20dp"
+                android:text="Login . Sign Up"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/menuProfile"
+                android:layout_alignTop="@id/Login.SignUp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="206dp"
+                android:src="@drawable/arrow_right" />
+
+
+            <ImageView
+                android:id="@+id/closeMenu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/menu_close" />
+
+            <View
+                android:id="@+id/menuCategoriesBar"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_below="@id/Login.SignUp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg" />
+
+            <ImageView
+                android:id="@+id/ivOrders"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignTop="@id/menuCategoriesBar"
+                android:layout_alignBottom="@id/menuCategoriesBar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/categorym" />
+
+            <TextView
+                android:id="@+id/tvMenuCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/menuCategoriesBar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/ivOrders"
+                android:text="Shop by Categories"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <View
+                android:id="@+id/themeStoreBar"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_below="@id/menuCategoriesBar"
+                android:background="@drawable/bg" />
+
+            <ImageView
+                android:id="@+id/ivCustomerCare"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignTop="@id/themeStoreBar"
+                android:layout_alignBottom="@id/themeStoreBar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/themem" />
+
+            <TextView
+                android:id="@+id/tvHelpCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/themeStoreBar"
+                android:layout_alignBottom="@id/themeStoreBar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/ivCustomerCare"
+                android:text="Theme Store" />
+
+            <View
+                android:id="@+id/menuOrderBar"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_below="@id/themeStoreBar"
+                android:background="@drawable/bg" />
+
+            <ImageView
+                android:id="@+id/ivWishlistHeart"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignTop="@id/menuOrderBar"
+                android:layout_alignBottom="@id/menuOrderBar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/order_box" />
+
+            <TextView
+                android:id="@+id/tvMOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/menuOrderBar"
+                android:layout_alignBottom="@id/menuOrderBar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/ivWishlistHeart"
+                android:text="Orders" />
+
+            <View
+                android:id="@+id/fAQsBar"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_below="@id/menuOrderBar"
+                android:background="@drawable/bg" />
+
+            <TextView
+                android:id="@+id/tvFAQs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tvMOrder"
+                android:layout_alignTop="@id/fAQsBar"
+                android:layout_marginTop="20dp"
+                android:text="FAQs"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/aboutUsBar"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_below="@id/fAQsBar"
+                android:background="@drawable/bg" />
+
+            <TextView
+                android:id="@+id/tvAboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tvMOrder"
+                android:layout_alignTop="@id/aboutUsBar"
+                android:layout_marginTop="20dp"
+                android:text="CONTACT US"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/termsOfUseBar"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_below="@id/aboutUsBar"
+                android:background="@drawable/bg" />
+
+            <TextView
+                android:id="@+id/tvTermsOfUse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tvMOrder"
+                android:layout_alignTop="@id/termsOfUseBar"
+                android:layout_marginTop="20dp"
+                android:text="LEGAL"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

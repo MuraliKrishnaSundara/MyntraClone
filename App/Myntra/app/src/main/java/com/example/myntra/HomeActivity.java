@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +26,12 @@ public class HomeActivity extends AppCompatActivity {
     private ImageView ivHs1Gadget;
     private ImageView ivHs1Kid;
     private ImageView cart;
+    private ImageView menuBar;
+    private ImageView closeMenu;
+    private View bgBlack;
+    private View menuCategoriesBar;
+    private View themeStoreBar;
+    private LinearLayout menuScreen;
 
     String url1 = "https://www.linkpicture.com/q/megaendofseason.jpeg";
     String url2 = "https://www.linkpicture.com/q/glowupsale.jpeg";
@@ -48,6 +55,20 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        menuCategoriesBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, CategoriesActivity.class);
+                startActivity(intent);
+            }
+        });
+        themeStoreBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, CategoriesActivity.class);
+                startActivity(intent);
+            }
+        });
         studio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +84,13 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
         profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+        bgBlack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
@@ -100,8 +128,22 @@ public class HomeActivity extends AppCompatActivity {
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this,ShoppingBag.class);
+                Intent intent = new Intent(HomeActivity.this, ShoppingBag.class);
                 startActivity(intent);
+            }
+        });
+        menuBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                menuScreen.setVisibility(View.VISIBLE);
+
+            }
+        });
+        closeMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                menuScreen.setVisibility(View.GONE);
             }
         });
 
@@ -135,5 +177,11 @@ public class HomeActivity extends AppCompatActivity {
         ivHs1Gadget = findViewById(R.id.hs1Gadgets);
         ivHs1Kid = findViewById(R.id.hs1Kids);
         cart = findViewById(R.id.cart);
+        menuBar = findViewById(R.id.dehaze);
+        closeMenu = findViewById(R.id.closeMenu);
+        menuScreen = findViewById(R.id.menuScreen);
+        menuCategoriesBar = findViewById(R.id.menuCategoriesBar);
+        themeStoreBar = findViewById(R.id.themeStoreBar);
+        bgBlack = findViewById(R.id.bgBlack);
     }
 }
