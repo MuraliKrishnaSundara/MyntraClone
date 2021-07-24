@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ProductDetailedView extends AppCompatActivity {
     private ImageView productImage;
+    private ImageView detailedProductCart;
     private TextView productCompanyName;
     private TextView productName;
     private TextView productPrice;
@@ -65,6 +66,13 @@ public class ProductDetailedView extends AppCompatActivity {
                 }
             }
         });
+        detailedProductCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProductDetailedView.this, ShoppingBag.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -83,5 +91,6 @@ public class ProductDetailedView extends AppCompatActivity {
         size = findViewById(R.id.size);
         btnWishList = findViewById(R.id.wishListButton);
         btnAddToCart = findViewById(R.id.addToCartButton);
+        detailedProductCart = findViewById(R.id.productToCart);
     }
 }
