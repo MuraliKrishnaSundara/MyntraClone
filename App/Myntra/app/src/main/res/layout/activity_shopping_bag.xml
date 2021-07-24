@@ -194,80 +194,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/v4"
         />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/v5"
-        app:layout_constraintBottom_toBottomOf="@id/v5"
-        app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/puma"
-        android:layout_marginLeft="30dp"
-    />
-    <TextView
-        android:id="@+id/tvPuma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Puma"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/v5"
-        android:layout_marginRight="60dp"
-        android:layout_marginTop="10dp"
-        android:textStyle="bold"
-        android:textSize="14dp"
-        android:textColor="@color/black"/>
 
-    <TextView
-        android:id="@+id/tvDesc1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Unisex Black Solid Baseball Cap"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvPuma"
-        android:layout_marginLeft="125dp"
-        android:layout_marginTop="5dp"
-        android:textSize="16dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/tvSoldby"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sold by: Puma Sports In..."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDesc1"
-        android:layout_marginLeft="46dp"
-        android:layout_marginTop="5dp"
-        android:textSize="13dp"
-        android:textColor="@android:color/darker_gray"/>
-
-    <TextView
-        android:id="@+id/tvPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" 450"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvSoldby"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="10dp"
-        android:textSize="18dp"
-        android:textColor="@android:color/black"
-        android:drawableLeft="@drawable/ic_rupee"
-        />
-    <TextView
-        android:id="@+id/tvDiscount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="50% OFF"
-        app:layout_constraintStart_toEndOf="@id/tvPrice"
-        app:layout_constraintTop_toBottomOf="@id/tvSoldby"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="30dp"
-        android:textSize="18dp"
-        android:textColor="#FF007F"/>
     <View
         android:id="@+id/vLine4"
         android:layout_width="match_parent"
@@ -286,31 +213,7 @@
         app:layout_constraintTop_toBottomOf="@id/vLine4"
         />
 
-    <TextView
-        android:id="@+id/tvRemove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="REMOVE"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/v6"
-        app:layout_constraintBottom_toBottomOf="@id/v6"
-        android:textSize="17sp"
-        android:layout_marginLeft="25dp"/>
 
-    <TextView
-        android:id="@+id/tvMove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="MOVE TO WISHLIST"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/v6"
-        app:layout_constraintBottom_toBottomOf="@id/v6"
-        android:textSize="17sp"
-        android:layout_marginLeft="25dp"/>
 
     <View
         android:id="@+id/vLine5"
