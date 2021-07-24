@@ -1,9 +1,11 @@
 package com.example.myntra;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,25 +30,39 @@ public class ProductDetailedView extends AppCompatActivity {
         btnWishList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ProductDetailedView.this, "Added to WishList", Toast.LENGTH_SHORT).show();
-                PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "wproductName", productName.getText().toString());
-                PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "wproductCompany", productCompanyName.getText().toString());
-                PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "wsize", "S");
-                PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "wproductPrice", Integer.parseInt(productPrice.getText().toString()));
-                PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "wproductImage", getIntent().getIntExtra("image", R.drawable.image_1));
+                String userNameData = PreferenceHelper.getStringFromPreference(ProductDetailedView.this, "userName");
+                if (userNameData.equals("")) {
+                    Toast.makeText(ProductDetailedView.this, "Please Login", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(ProductDetailedView.this, Login_Activity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(ProductDetailedView.this, "Added to WishList", Toast.LENGTH_SHORT).show();
+                    PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "wproductName", productName.getText().toString());
+                    PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "wproductCompany", productCompanyName.getText().toString());
+                    PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "wsize", "S");
+                    PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "wproductPrice", Integer.parseInt(productPrice.getText().toString()));
+                    PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "wproductImage", getIntent().getIntExtra("image", R.drawable.image_1));
+                }
             }
         });
         btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ProductDetailedView.this, "Added to Cart", Toast.LENGTH_SHORT).show();
-                PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "productName", productName.getText().toString());
-                PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "productCompany", productCompanyName.getText().toString());
-                PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "size", "S");
-                PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "productPrice", Integer.parseInt(productPrice.getText().toString()));
-                PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "productImage", getIntent().getIntExtra("image", R.drawable.image_1));
-                PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "added", 1);
+                String userNameData = PreferenceHelper.getStringFromPreference(ProductDetailedView.this, "userName");
+                if (userNameData.equals("")) {
+                    Toast.makeText(ProductDetailedView.this, "Please Login", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(ProductDetailedView.this, Login_Activity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(ProductDetailedView.this, "Added to Cart", Toast.LENGTH_SHORT).show();
+                    PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "productName", productName.getText().toString());
+                    PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "productCompany", productCompanyName.getText().toString());
+                    PreferenceHelper.writeStringToPreference(ProductDetailedView.this, "size", "S");
+                    PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "productPrice", Integer.parseInt(productPrice.getText().toString()));
+                    PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "productImage", getIntent().getIntExtra("image", R.drawable.image_1));
+                    PreferenceHelper.writeIntToPreference(ProductDetailedView.this, "added", 1);
 
+                }
             }
         });
     }
