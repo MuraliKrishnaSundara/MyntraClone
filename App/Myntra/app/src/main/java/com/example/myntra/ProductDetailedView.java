@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ProductDetailedView extends AppCompatActivity {
     private ImageView productImage;
     private ImageView detailedProductCart;
+    private ImageView detailedProductWishList;
     private TextView productCompanyName;
     private TextView productName;
     private TextView productPrice;
@@ -73,6 +74,13 @@ public class ProductDetailedView extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        detailedProductWishList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProductDetailedView.this, WishlistActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -92,5 +100,6 @@ public class ProductDetailedView extends AppCompatActivity {
         btnWishList = findViewById(R.id.wishListButton);
         btnAddToCart = findViewById(R.id.addToCartButton);
         detailedProductCart = findViewById(R.id.productToCart);
+        detailedProductWishList = findViewById(R.id.wishList);
     }
 }
