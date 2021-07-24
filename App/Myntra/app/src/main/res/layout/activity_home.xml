@@ -716,7 +716,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/menuProfile"
                 android:layout_marginLeft="20dp"
-                android:text="Login . Sign Up"
+                android:text="Log In  .  Sign Up"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
