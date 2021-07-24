@@ -5,6 +5,8 @@ public class ProductData {
     private String productName;
     private String productType;
     private int productCost;
+    private String size;
+
 
     public ProductData(int image, String name, String type, int cost) {
         this.productImage = image;

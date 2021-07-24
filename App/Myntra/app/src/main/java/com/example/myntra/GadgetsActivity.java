@@ -1,5 +1,6 @@
 package com.example.myntra;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class GadgetsActivity extends AppCompatActivity {
+public class GadgetsActivity extends AppCompatActivity implements OnProductClick {
 
     private RecyclerView recyclerView;
     private ArrayList<ProductData> gadgetsDataList;
@@ -67,7 +68,7 @@ public class GadgetsActivity extends AppCompatActivity {
     }
 
     private void setRecyclerView() {
-        ProductAdapter gadgetsAdapter = new ProductAdapter(gadgetsDataList);
+        ProductAdapter gadgetsAdapter = new ProductAdapter(gadgetsDataList, this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(gadgetsAdapter);
@@ -76,5 +77,20 @@ public class GadgetsActivity extends AppCompatActivity {
 
     private void initViews() {
         recyclerView = findViewById(R.id.gadgetsRecyclerView);
+    }
+
+    @Override
+    public void ItemClicked(ProductData productData, int position) {
+        Intent intent = new Intent(GadgetsActivity.this, ProductDetailedView.class);
+        intent.putExtra("productName", productData.getProductType());
+        intent.putExtra("productCompany", productData.getProductName());
+        intent.putExtra("productPrice", productData.getProductCost());
+        intent.putExtra("image", productData.getProductImage());
+        startActivity(intent);
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }

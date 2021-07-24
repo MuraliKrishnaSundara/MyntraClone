@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCC"
+    tools:context=".ProductDetailedView">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/tvTax"
+                app:layout_constraintTop_toTopOf="@id/productCompanyName" />
+
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginTop="45dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/productCompanyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Boat"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/productImage" />
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="boat prodict"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/productCompanyName"
+                app:layout_constraintTop_toBottomOf="@id/productCompanyName" />
+
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_rupee"
+                android:text="100"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/productName"
+                app:layout_constraintTop_toBottomOf="@id/productName" />
+
+            <TextView
+                android:id="@+id/tvTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inclusive of all taxes"
+                android:textColor="#2A982A"
+                app:layout_constraintStart_toStartOf="@id/productPrice"
+                app:layout_constraintTop_toBottomOf="@id/productPrice" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/size"
+                app:layout_constraintTop_toTopOf="@id/tvSize" />
+
+            <TextView
+                android:id="@+id/tvSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Select Size"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTax" />
+
+            <RadioGroup
+                android:id="@+id/size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+
+                app:layout_constraintTop_toBottomOf="@id/tvSize">
+
+                <RadioButton
+                    android:id="@+id/sizeS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="S"
+                    app:layout_constraintEnd_toStartOf="@id/sizeM"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/sizeM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="M"
+                    app:layout_constraintEnd_toStartOf="@id/sizeL"
+
+                    app:layout_constraintStart_toEndOf="@id/sizeS"
+                    app:layout_constraintTop_toTopOf="@id/sizeS" />
+
+                <RadioButton
+                    android:id="@+id/sizeL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="L"
+                    app:layout_constraintEnd_toStartOf="@id/sizeXL"
+
+                    app:layout_constraintStart_toEndOf="@id/sizeM"
+                    app:layout_constraintTop_toTopOf="@id/sizeS" />
+
+                <RadioButton
+                    android:id="@+id/sizeXL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="XL"
+
+                    app:layout_constraintEnd_toStartOf="@id/sizeXXL"
+                    app:layout_constraintStart_toEndOf="@id/sizeL"
+                    app:layout_constraintTop_toTopOf="@id/sizeS" />
+
+                <RadioButton
+                    android:id="@+id/sizeXXL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="XXL"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toEndOf="@id/sizeXL"
+                    app:layout_constraintTop_toTopOf="@id/sizeS" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/emi_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/emi_option"
+                app:layout_constraintTop_toBottomOf="@id/size" />
+
+            <ImageView
+                android:id="@+id/return_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/return_policy"
+                app:layout_constraintTop_toBottomOf="@id/emi_option" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@id/return_policy" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/productBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_bg"
+        android:padding="10dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/productToCart"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_bg"
+        android:padding="10dp"
+        android:src="@drawable/ic_cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/productBack" />
+
+    <ImageView
+        android:id="@+id/wishList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/heart"
+        app:layout_constraintEnd_toStartOf="@id/productToCart"
+        app:layout_constraintTop_toTopOf="@id/productBack" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_bg"
+        android:padding="10dp"
+        android:src="@drawable/share"
+        app:layout_constraintEnd_toStartOf="@id/wishList"
+        app:layout_constraintTop_toTopOf="@id/productBack" />
+
+    <Button
+        android:id="@+id/wishListButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/heart"
+        android:paddingLeft="25dp"
+        android:text="wishlist"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/addToCartButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addToCartButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/red"
+        android:drawableLeft="@drawable/ic_cart"
+        android:paddingLeft="30dp"
+        android:text="Add to Cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/wishListButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

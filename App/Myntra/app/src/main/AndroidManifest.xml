@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Myntra">
-        <activity android:name=".ShoppingBag"></activity>
+        <activity android:name=".ProductDetailedView"></activity>
+        <activity android:name=".ShoppingBag" />
         <activity android:name=".KidsActivity" />
         <activity android:name=".GadgetsActivity" />
         <activity android:name=".WomenActivity" />

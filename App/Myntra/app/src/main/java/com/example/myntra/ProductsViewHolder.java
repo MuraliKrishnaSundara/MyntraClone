@@ -15,9 +15,11 @@ public class ProductsViewHolder extends RecyclerView.ViewHolder {
     private TextView mTvProductType;
     private TextView mTvProductCost;
     private RelativeLayout relativeLayout;
+    private OnProductClick onProductClick;
 
-    public ProductsViewHolder(@NonNull View itemView) {
+    public ProductsViewHolder(@NonNull View itemView, OnProductClick onProductClick) {
         super(itemView);
+        this.onProductClick = onProductClick;
         iniViews(itemView);
     }
 
@@ -35,6 +37,12 @@ public class ProductsViewHolder extends RecyclerView.ViewHolder {
         mTvProductName.setText(productData.getProductName());
         mTvProductType.setText(productData.getProductType());
         mTvProductCost.setText(productData.getProductCost() + "");
+        relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onProductClick.ItemClicked(productData, getAdapterPosition());
+            }
+        });
     }
 
 }
