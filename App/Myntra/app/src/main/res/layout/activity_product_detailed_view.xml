@@ -80,14 +80,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:background="@color/white"
-                app:layout_constraintBottom_toBottomOf="@id/sizeS"
+                app:layout_constraintBottom_toBottomOf="@id/size"
                 app:layout_constraintTop_toTopOf="@id/tvSize" />
 
             <TextView
                 android:id="@+id/tvSize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="Select Size"
                 android:textColor="@color/black"
@@ -96,62 +96,75 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvTax" />
 
-            <RadioButton
-                android:id="@+id/sizeS"
-                android:layout_width="wrap_content"
+            <RadioGroup
+                android:id="@+id/size"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="S"
-                app:layout_constraintEnd_toStartOf="@id/sizeM"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvSize" />
+                android:orientation="horizontal"
 
-            <RadioButton
-                android:id="@+id/sizeM"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="M"
-                app:layout_constraintEnd_toStartOf="@id/sizeL"
+                app:layout_constraintTop_toBottomOf="@id/tvSize">
 
-                app:layout_constraintStart_toEndOf="@id/sizeS"
-                app:layout_constraintTop_toTopOf="@id/sizeS" />
+                <RadioButton
+                    android:id="@+id/sizeS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="S"
+                    app:layout_constraintEnd_toStartOf="@id/sizeM"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-            <RadioButton
-                android:id="@+id/sizeL"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="L"
-                app:layout_constraintEnd_toStartOf="@id/sizeXL"
+                <RadioButton
+                    android:id="@+id/sizeM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="M"
+                    app:layout_constraintEnd_toStartOf="@id/sizeL"
 
-                app:layout_constraintStart_toEndOf="@id/sizeM"
-                app:layout_constraintTop_toTopOf="@id/sizeS" />
+                    app:layout_constraintStart_toEndOf="@id/sizeS"
+                    app:layout_constraintTop_toTopOf="@id/sizeS" />
 
-            <RadioButton
-                android:id="@+id/sizeXL"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="XL"
+                <RadioButton
+                    android:id="@+id/sizeL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="L"
+                    app:layout_constraintEnd_toStartOf="@id/sizeXL"
 
-                app:layout_constraintEnd_toStartOf="@id/sizeXXL"
-                app:layout_constraintStart_toEndOf="@id/sizeL"
-                app:layout_constraintTop_toTopOf="@id/sizeS" />
+                    app:layout_constraintStart_toEndOf="@id/sizeM"
+                    app:layout_constraintTop_toTopOf="@id/sizeS" />
 
-            <RadioButton
-                android:id="@+id/sizeXXL"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="XXL"
-                app:layout_constraintEnd_toEndOf="parent"
+                <RadioButton
+                    android:id="@+id/sizeXL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="XL"
 
-                app:layout_constraintStart_toEndOf="@id/sizeXL"
-                app:layout_constraintTop_toTopOf="@id/sizeS" />
+                    app:layout_constraintEnd_toStartOf="@id/sizeXXL"
+                    app:layout_constraintStart_toEndOf="@id/sizeL"
+                    app:layout_constraintTop_toTopOf="@id/sizeS" />
+
+                <RadioButton
+                    android:id="@+id/sizeXXL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="XXL"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toEndOf="@id/sizeXL"
+                    app:layout_constraintTop_toTopOf="@id/sizeS" />
+            </RadioGroup>
 
             <ImageView
                 android:id="@+id/emi_option"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/emi_option"
-                app:layout_constraintTop_toBottomOf="@id/sizeS" />
+                app:layout_constraintTop_toBottomOf="@id/size" />
 
             <ImageView
                 android:id="@+id/return_policy"

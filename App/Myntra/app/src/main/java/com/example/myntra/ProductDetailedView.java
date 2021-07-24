@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,13 +15,7 @@ public class ProductDetailedView extends AppCompatActivity {
     private TextView productCompanyName;
     private TextView productName;
     private TextView productPrice;
-    private RadioButton sizeS;
-    private RadioButton sizeM;
-    private RadioButton sizeL;
-    private RadioButton sizeXL;
-    private RadioButton sizeXXL;
-
-
+    private RadioGroup size;
     private Button btnWishList;
     private Button btnAddToCart;
 
@@ -51,11 +45,7 @@ public class ProductDetailedView extends AppCompatActivity {
         productCompanyName = findViewById(R.id.productCompanyName);
         productName = findViewById(R.id.productName);
         productPrice = findViewById(R.id.productPrice);
-        sizeS = findViewById(R.id.sizeS);
-        sizeM = findViewById(R.id.sizeM);
-        sizeL = findViewById(R.id.sizeL);
-        sizeXL = findViewById(R.id.sizeXL);
-        sizeXXL = findViewById(R.id.sizeXXL);
+        size = findViewById(R.id.size);
         btnWishList = findViewById(R.id.wishListButton);
         btnAddToCart = findViewById(R.id.addToCartButton);
     }
