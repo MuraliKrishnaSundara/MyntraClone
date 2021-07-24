@@ -80,7 +80,7 @@ public class WishlistActivity extends AppCompatActivity {
         btnRemove = findViewById(R.id.btnRemove);
         btnMove = findViewById(R.id.btnMove);
         linearLayout = findViewById(R.id.btnShowHide);
-        constraintLayout = findViewById(R.id.wishListLayout);
+        constraintLayout = findViewById(R.id.wishCart);
         goToCart = findViewById(R.id.btnWCart);
         goToHome = findViewById(R.id.btnWShop);
     }
