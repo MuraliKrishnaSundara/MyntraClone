@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wishListLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8DEDE4E4"
+    tools:context=".WishlistActivity">
+
+    <View
+        android:id="@+id/wViewTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWishlistTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:drawableLeft="@drawable/ic_back"
+        android:drawablePadding="20dp"
+        android:text="WISHLIST"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="13dp"
+        android:src="@drawable/ic_heart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wishCart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/edittext_bg"
+        app:layout_constraintBottom_toBottomOf="@id/btnShowHide"
+        app:layout_constraintTop_toBottomOf="@id/wViewTop">
+
+
+        <ImageView
+            android:id="@+id/wProductImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="30dp"
+            android:padding="10dp"
+            android:src="@drawable/puma"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/wishCart" />
+
+
+        <TextView
+            android:id="@+id/wProductCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="60dp"
+            android:text="Puma"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/wProductPrice"
+            app:layout_constraintTop_toTopOf="@id/wishCart" />
+
+        <TextView
+            android:id="@+id/wProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Unisex Black Solid Baseball Cap"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@id/wProductPrice"
+            app:layout_constraintTop_toBottomOf="@id/wProductCompanyName" />
+
+        <TextView
+            android:id="@+id/tvSoldby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Sold by: Myntra..."
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="@id/wProductPrice"
+            app:layout_constraintTop_toBottomOf="@id/wProductName" />
+
+        <TextView
+            android:id="@+id/wProductSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="size"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/wProductPrice"
+            app:layout_constraintTop_toBottomOf="@id/tvSoldby" />
+
+        <TextView
+            android:id="@+id/wProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="80dp"
+            android:drawableLeft="@drawable/ic_rupee"
+            android:text="450"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/wProductSize" />
+
+
+        <LinearLayout
+            android:id="@+id/btnShowHide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@id/wProductPrice">
+
+            <TextView
+                android:id="@+id/btnRemove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@color/red"
+                android:drawableLeft="@drawable/ic_close"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="REMOVE"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnMove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:background="@color/pink"
+                android:drawableLeft="@drawable/ic_cart"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Add to cart"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnWCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@color/pink"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Go TO cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnWShop" />
+
+    <Button
+        android:id="@+id/btnWShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Explore MORE"
+        app:layout_constraintBottom_toBottomOf="@id/btnWCart"
+        app:layout_constraintEnd_toStartOf="@id/btnWCart"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

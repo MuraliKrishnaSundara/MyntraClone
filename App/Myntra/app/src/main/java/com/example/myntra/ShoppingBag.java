@@ -1,5 +1,6 @@
 package com.example.myntra;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +25,7 @@ public class ShoppingBag extends AppCompatActivity {
     private TextView itemCount;
     private TextView orderTotal;
     private Button placeOrder;
+    private ImageView wishList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,6 @@ public class ShoppingBag extends AppCompatActivity {
         setContentView(R.layout.activity_shopping_bag);
         initViews();
         int added = PreferenceHelper.getIntFromPreference(ShoppingBag.this, "added");
-        String name = PreferenceHelper.getStringFromPreference(ShoppingBag.this, "productName");
         int price = PreferenceHelper.getIntFromPreference(ShoppingBag.this, "productPrice");
 
         if (added != 1) {
@@ -41,7 +42,7 @@ public class ShoppingBag extends AppCompatActivity {
         } else {
             constraintLayout.setVisibility(View.VISIBLE);
             itemCount.setText("1 ITEM");
-            productName.setText(name);
+            productName.setText(PreferenceHelper.getStringFromPreference(ShoppingBag.this, "productName"));
             productCompanyName.setText(PreferenceHelper.getStringFromPreference(ShoppingBag.this, "productCompany"));
             productSize.setText(PreferenceHelper.getStringFromPreference(ShoppingBag.this, "size"));
             productPrice.setText(price + "");
@@ -81,6 +82,28 @@ public class ShoppingBag extends AppCompatActivity {
                 PreferenceHelper.writeIntToPreference(ShoppingBag.this, "added", 0);
             }
         });
+        btnMove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                constraintLayout.setVisibility(View.GONE);
+                itemCount.setText("NO ITEMS ADDED TO CART");
+                orderTotal.setText("0");
+                PreferenceHelper.writeIntToPreference(ShoppingBag.this, "added", 0);
+                PreferenceHelper.writeIntToPreference(ShoppingBag.this, "wish", 1);
+                PreferenceHelper.writeStringToPreference(ShoppingBag.this, "wproductName", productName.getText().toString());
+                PreferenceHelper.writeStringToPreference(ShoppingBag.this, "wproductCompany", productCompanyName.getText().toString());
+                PreferenceHelper.writeStringToPreference(ShoppingBag.this, "wsize", "S");
+                PreferenceHelper.writeIntToPreference(ShoppingBag.this, "wproductPrice", Integer.parseInt(productPrice.getText().toString()));
+                PreferenceHelper.writeIntToPreference(ShoppingBag.this, "wproductImage", PreferenceHelper.getIntFromPreference(ShoppingBag.this, "productImage"));
+            }
+        });
+        wishList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ShoppingBag.this, WishlistActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initViews() {
@@ -93,8 +116,9 @@ public class ShoppingBag extends AppCompatActivity {
         btnMove = findViewById(R.id.btnMove);
         linearLayout = findViewById(R.id.btnShowHide);
         constraintLayout = findViewById(R.id.v5);
-        itemCount = findViewById(R.id.tvItemCount);
         orderTotal = findViewById(R.id.orderTotal);
+        itemCount = findViewById(R.id.tvItemCount);
         placeOrder = findViewById(R.id.placeOrder);
+        wishList = findViewById(R.id.like);
     }
 }
