@@ -12,16 +12,18 @@ import java.util.ArrayList;
 public class ProductAdapter extends RecyclerView.Adapter<ProductsViewHolder> {
 
     private ArrayList<ProductData> productDataList;
+    private OnProductClick onProductClick;
 
-    public ProductAdapter(ArrayList<ProductData> productList) {
+    public ProductAdapter(ArrayList<ProductData> productList, OnProductClick onProductClick) {
         this.productDataList = productList;
+        this.onProductClick = onProductClick;
     }
 
     @NonNull
     @Override
     public ProductsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.products_item_layout, parent, false);
-        return new ProductsViewHolder(view);
+        return new ProductsViewHolder(view, onProductClick);
     }
 
     @Override

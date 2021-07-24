@@ -1,6 +1,8 @@
 package com.example.myntra;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -8,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class WomenActivity extends AppCompatActivity {
+public class WomenActivity extends AppCompatActivity implements OnProductClick{
 
     private RecyclerView recyclerView;
     private ArrayList<ProductData> womenProductList;
@@ -67,7 +69,7 @@ public class WomenActivity extends AppCompatActivity {
     }
 
     private void setRecyclerView() {
-        ProductAdapter womenAdapter = new ProductAdapter(womenProductList);
+        ProductAdapter womenAdapter = new ProductAdapter(womenProductList,this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(womenAdapter);
@@ -76,5 +78,21 @@ public class WomenActivity extends AppCompatActivity {
 
     private void initViews() {
         recyclerView = findViewById(R.id.womenWearRecyclerView);
+    }
+
+    @Override
+    public void ItemClicked(ProductData productData, int position) {
+        Intent intent = new Intent(WomenActivity.this, ProductDetailedView.class);
+        intent.putExtra("productName", productData.getProductType());
+        intent.putExtra("productCompany", productData.getProductName());
+        intent.putExtra("productPrice", productData.getProductCost());
+        intent.putExtra("image", productData.getProductImage());
+        startActivity(intent);
+
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }
