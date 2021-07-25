@@ -264,7 +264,7 @@
             android:id="@+id/addQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/circle_bg"
             android:src="@drawable/ic_add"
             app:layout_constraintStart_toStartOf="@id/productPrice"
@@ -285,7 +285,7 @@
             android:id="@+id/removeQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:background="@drawable/circle_bg"
             android:src="@drawable/ic_remove"
             app:layout_constraintStart_toEndOf="@id/quantity"
@@ -345,8 +345,22 @@
         android:text="PLACE ORDER"
         android:textSize="18dp"
         android:textStyle="bold"
-        android:backgroundTint="#FF007F"
-        />
+        android:backgroundTint="@color/pink" />
+
+    <Button
+        android:id="@+id/orderMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:backgroundTint="@color/pink"
+        android:padding="20dp"
+        android:text="Go to orders"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/placeOrder" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

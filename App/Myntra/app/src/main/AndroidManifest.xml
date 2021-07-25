@@ -12,10 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Myntra">
+        <activity android:name=".OrderActivity"></activity>
         <activity
             android:name=".WishlistActivity"
             android:label="@string/title_activity_wishlist"
-            android:theme="@style/Theme.Myntra.NoActionBar"></activity>
+            android:theme="@style/Theme.Myntra.NoActionBar" />
         <activity android:name=".ProductDetailedView" />
         <activity android:name=".ShoppingBag" />
         <activity android:name=".KidsActivity" />

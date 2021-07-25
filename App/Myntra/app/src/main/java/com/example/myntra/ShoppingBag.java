@@ -29,14 +29,16 @@ public class ShoppingBag extends AppCompatActivity {
     private ImageView addQuantity;
     private TextView quantity;
     private ImageView removeQuantity;
-    private static int quantityNum = 1;
+    private static int quantityNum;
+    private int added;
+    private Button orders;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_bag);
         initViews();
-        int added = PreferenceHelper.getIntFromPreference(ShoppingBag.this, "added");
+        added = PreferenceHelper.getIntFromPreference(ShoppingBag.this, "added");
         int price = PreferenceHelper.getIntFromPreference(ShoppingBag.this, "productPrice");
 
         if (added != 1) {
@@ -44,6 +46,7 @@ public class ShoppingBag extends AppCompatActivity {
             orderTotal.setText("0");
             constraintLayout.setVisibility(View.GONE);
         } else {
+            quantityNum = 1;
             constraintLayout.setVisibility(View.VISIBLE);
             itemCount.setText("1 ITEM");
             productName.setText(PreferenceHelper.getStringFromPreference(ShoppingBag.this, "productName"));
@@ -73,6 +76,17 @@ public class ShoppingBag extends AppCompatActivity {
                     Toast.makeText(ShoppingBag.this, "Add orders to Cart first", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(ShoppingBag.this, "order done", Toast.LENGTH_SHORT).show();
+                    PreferenceHelper.writeIntToPreference(ShoppingBag.this, "orderDone", 1);
+                    PreferenceHelper.writeIntToPreference(ShoppingBag.this, "added", 0);
+                    PreferenceHelper.writeIntToPreference(ShoppingBag.this, "quantity", quantityNum);
+                    PreferenceHelper.writeIntToPreference(ShoppingBag.this, "total", price * quantityNum);
+                    if (PreferenceHelper.getIntFromPreference(ShoppingBag.this, "orderDone") == 1) {
+                        constraintLayout.setVisibility(View.GONE);
+                        itemCount.setText("NO ITEMS ADDED TO CART");
+                        orderTotal.setText("0");
+                        quantityNum = 0;
+                        orders.setVisibility(View.VISIBLE);
+                    }
                 }
             }
         });
@@ -90,7 +104,7 @@ public class ShoppingBag extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 constraintLayout.setVisibility(View.GONE);
-                itemCount.setText("NO ITEMS ADDED TO CART");
+                itemCount.setText("NO ITEMS IN CART");
                 orderTotal.setText("0");
                 PreferenceHelper.writeIntToPreference(ShoppingBag.this, "added", 0);
                 PreferenceHelper.writeIntToPreference(ShoppingBag.this, "wish", 1);
@@ -132,6 +146,14 @@ public class ShoppingBag extends AppCompatActivity {
                 }
             }
         });
+        orders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ShoppingBag.this,OrderActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void initViews() {
@@ -151,5 +173,6 @@ public class ShoppingBag extends AppCompatActivity {
         addQuantity = findViewById(R.id.addQuantity);
         quantity = findViewById(R.id.quantity);
         removeQuantity = findViewById(R.id.removeQuantity);
+        orders = findViewById(R.id.orderMenu);
     }
 }

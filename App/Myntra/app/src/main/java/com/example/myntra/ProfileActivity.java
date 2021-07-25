@@ -28,6 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView profileName;
     private ImageView profileImage;
     private View bgView;
+    private View order;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,7 +113,13 @@ public class ProfileActivity extends AppCompatActivity {
             profileName.setText(userNameData);
             bgView.setBackgroundColor(getResources().getColor(R.color.red));
         }
-
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, OrderActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -133,6 +140,7 @@ public class ProfileActivity extends AppCompatActivity {
         profileName = findViewById(R.id.tvProfileName);
         bgView = findViewById(R.id.blackView);
         profileImage = findViewById(R.id.ivProductImage);
+        order = findViewById(R.id.ordersBar);
     }
 
     private boolean validPhoneNumber() {
