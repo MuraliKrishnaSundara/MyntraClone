@@ -246,11 +246,11 @@
             app:layout_constraintStart_toStartOf="@id/productPrice"
             app:layout_constraintTop_toBottomOf="@id/tvSoldby" />
 
+
         <TextView
             android:id="@+id/productPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="50dp"
             android:drawableLeft="@drawable/ic_rupee"
             android:text=" 450"
@@ -260,15 +260,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/productSize" />
 
+        <ImageView
+            android:id="@+id/addQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_bg"
+            android:src="@drawable/ic_add"
+            app:layout_constraintStart_toStartOf="@id/productPrice"
+            app:layout_constraintTop_toBottomOf="@id/productPrice" />
 
-        <View
-            android:id="@+id/vLine4"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#d3d3d3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/v5" />
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/addQuantity"
+            app:layout_constraintTop_toTopOf="@id/addQuantity" />
+
+        <ImageView
+            android:id="@+id/removeQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/circle_bg"
+            android:src="@drawable/ic_remove"
+            app:layout_constraintStart_toEndOf="@id/quantity"
+            app:layout_constraintTop_toTopOf="@id/addQuantity" />
 
         <LinearLayout
             android:id="@+id/btnShowHide"
@@ -276,7 +297,7 @@
             android:layout_height="wrap_content"
             android:visibility="gone"
             android:weightSum="2"
-            app:layout_constraintTop_toBottomOf="@id/productPrice">
+            app:layout_constraintTop_toBottomOf="@id/addQuantity">
 
             <Button
                 android:id="@+id/btnRemove"
