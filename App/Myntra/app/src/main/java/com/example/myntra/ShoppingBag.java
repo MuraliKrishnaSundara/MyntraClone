@@ -143,6 +143,7 @@ public class ShoppingBag extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     private void initViews() {
