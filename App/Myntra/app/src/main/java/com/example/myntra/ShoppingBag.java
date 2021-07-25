@@ -30,7 +30,6 @@ public class ShoppingBag extends AppCompatActivity {
     private TextView quantity;
     private ImageView removeQuantity;
     private static int quantityNum;
-    private int added;
     private Button orders;
 
     @Override
@@ -38,7 +37,7 @@ public class ShoppingBag extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_bag);
         initViews();
-        added = PreferenceHelper.getIntFromPreference(ShoppingBag.this, "added");
+        int added = PreferenceHelper.getIntFromPreference(ShoppingBag.this, "added");
         int price = PreferenceHelper.getIntFromPreference(ShoppingBag.this, "productPrice");
 
         if (added != 1) {
@@ -84,7 +83,6 @@ public class ShoppingBag extends AppCompatActivity {
                         constraintLayout.setVisibility(View.GONE);
                         itemCount.setText("NO ITEMS ADDED TO CART");
                         orderTotal.setText("0");
-                        quantityNum = 0;
                         orders.setVisibility(View.VISIBLE);
                     }
                 }
