@@ -22,7 +22,8 @@ public class MenActivity extends AppCompatActivity implements OnProductClick {
 
     private RecyclerView recyclerView;
     private ArrayList<ProductData> menProductList;
-    private TextView mTvSort;
+    private ImageView mTvSortA;
+    private ImageView mTvSortD;
     private ImageView wishlist;
     private ImageView cart;
 
@@ -33,11 +34,19 @@ public class MenActivity extends AppCompatActivity implements OnProductClick {
         initViews();
         buildIdentityList();
         setRecyclerView();
-        mTvSort.setOnClickListener(new View.OnClickListener() {
+        mTvSortA.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
                 menProductList.sort(Comparator.comparing(ProductData::getProductCost));
+                setRecyclerView();
+            }
+        });
+        mTvSortD.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onClick(View v) {
+                menProductList.sort(Comparator.comparing(ProductData::getProductCost).reversed());
                 setRecyclerView();
             }
         });
@@ -111,7 +120,8 @@ public class MenActivity extends AppCompatActivity implements OnProductClick {
 
     private void initViews() {
         recyclerView = findViewById(R.id.mensWearRecyclerView);
-        mTvSort = findViewById(R.id.tvSort);
+        mTvSortA = findViewById(R.id.downArrow);
+        mTvSortD = findViewById(R.id.upArrow);
         wishlist = findViewById(R.id.ivWishlist);
         cart = findViewById(R.id.ivCart);
     }

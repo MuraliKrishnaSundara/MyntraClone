@@ -77,18 +77,33 @@
         app:layout_constraintEnd_toStartOf="@id/tvSort"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:id="@+id/downArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/down_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/tvGadgets"
+        app:layout_constraintEnd_toStartOf="@id/tvSort"
+        app:layout_constraintStart_toEndOf="@id/tvGadgets" />
+
     <TextView
         android:id="@+id/tvSort"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/sort_men"
-        android:drawablePadding="10dp"
         android:text="SORT"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/tvGadgets"
+        app:layout_constraintEnd_toStartOf="@id/upArrow"
+        app:layout_constraintStart_toEndOf="@id/downArrow" />
+
+    <ImageView
+        android:id="@+id/upArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/up_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/tvGadgets"
         app:layout_constraintEnd_toStartOf="@id/tvFilter"
-        app:layout_constraintStart_toEndOf="@id/tvGadgets"
-        app:layout_constraintTop_toTopOf="@id/tvGadgets" />
+        app:layout_constraintStart_toEndOf="@id/tvSort" />
 
     <TextView
         android:id="@+id/tvFilter"

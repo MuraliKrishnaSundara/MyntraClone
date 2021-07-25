@@ -3,12 +3,12 @@ package com.example.myntra;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,7 +20,8 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
 
     private RecyclerView recyclerView;
     private ArrayList<ProductData> footWearProductList;
-    private TextView mTvSort;
+    private ImageView mTvSortA;
+    private ImageView mTvSortD;
     private ImageView wishlist;
     private ImageView cart;
 
@@ -45,11 +46,19 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
                 startActivity(intent);
             }
         });
-        mTvSort.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.N)
+        mTvSortA.setOnClickListener(new View.OnClickListener() {
+            @androidx.annotation.RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
                 footWearProductList.sort(Comparator.comparing(ProductData::getProductCost));
+                setRecyclerView();
+            }
+        });
+        mTvSortD.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onClick(View v) {
+                footWearProductList.sort(Comparator.comparing(ProductData::getProductCost).reversed());
                 setRecyclerView();
             }
         });
@@ -109,7 +118,8 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
 
     private void initViews() {
         recyclerView = findViewById(R.id.footWearRecyclerView);
-        mTvSort = findViewById(R.id.tvSort);
+        mTvSortA = findViewById(R.id.downArrow);
+        mTvSortD = findViewById(R.id.upArrow);
         wishlist = findViewById(R.id.ivWishlist);
         cart = findViewById(R.id.ivCart);
     }
