@@ -26,6 +26,10 @@ public class ShoppingBag extends AppCompatActivity {
     private TextView orderTotal;
     private Button placeOrder;
     private ImageView wishList;
+    private ImageView addQuantity;
+    private TextView quantity;
+    private ImageView removeQuantity;
+    private static int quantityNum = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +73,6 @@ public class ShoppingBag extends AppCompatActivity {
                     Toast.makeText(ShoppingBag.this, "Add orders to Cart first", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(ShoppingBag.this, "order done", Toast.LENGTH_SHORT).show();
-
                 }
             }
         });
@@ -80,6 +83,7 @@ public class ShoppingBag extends AppCompatActivity {
                 itemCount.setText("NO ITEMS ADDED TO CART");
                 orderTotal.setText("0");
                 PreferenceHelper.writeIntToPreference(ShoppingBag.this, "added", 0);
+                quantityNum = 0;
             }
         });
         btnMove.setOnClickListener(new View.OnClickListener() {
@@ -104,6 +108,30 @@ public class ShoppingBag extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        addQuantity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (quantityNum > 9) {
+                    Toast.makeText(ShoppingBag.this, "Maximum item", Toast.LENGTH_SHORT).show();
+                } else {
+                    quantityNum++;
+                    quantity.setText(quantityNum + "");
+                    orderTotal.setText(price * quantityNum + "");
+                }
+            }
+        });
+        removeQuantity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (quantityNum > 1) {
+                    quantityNum--;
+                    quantity.setText(quantityNum + "");
+                    orderTotal.setText(price * quantityNum + "");
+                } else {
+                    Toast.makeText(ShoppingBag.this, "Minimum reached", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     private void initViews() {
@@ -120,5 +148,8 @@ public class ShoppingBag extends AppCompatActivity {
         itemCount = findViewById(R.id.tvItemCount);
         placeOrder = findViewById(R.id.placeOrder);
         wishList = findViewById(R.id.like);
+        addQuantity = findViewById(R.id.addQuantity);
+        quantity = findViewById(R.id.quantity);
+        removeQuantity = findViewById(R.id.removeQuantity);
     }
 }
