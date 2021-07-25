@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -67,6 +68,20 @@ public class WishlistActivity extends AppCompatActivity {
                     linearLayout.setVisibility(View.VISIBLE);
                 } else
                     linearLayout.setVisibility(View.GONE);
+            }
+        });
+        btnMove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                constraintLayout.setVisibility(View.GONE);
+                Toast.makeText(WishlistActivity.this, "Added to Cart", Toast.LENGTH_SHORT).show();
+                PreferenceHelper.writeStringToPreference(WishlistActivity.this, "productName", productName.getText().toString());
+                PreferenceHelper.writeStringToPreference(WishlistActivity.this, "productCompany", productCompanyName.getText().toString());
+                PreferenceHelper.writeStringToPreference(WishlistActivity.this, "size", "S");
+                PreferenceHelper.writeIntToPreference(WishlistActivity.this, "productPrice", Integer.parseInt(productPrice.getText().toString()));
+                PreferenceHelper.writeIntToPreference(WishlistActivity.this, "productImage", PreferenceHelper.getIntFromPreference(WishlistActivity.this, "wproductImage"));
+                PreferenceHelper.writeIntToPreference(WishlistActivity.this, "added", 1);
+                PreferenceHelper.writeIntToPreference(WishlistActivity.this, "wish", 0);
             }
         });
     }
