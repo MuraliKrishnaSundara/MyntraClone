@@ -72,6 +72,7 @@ public class OrderActivity extends AppCompatActivity {
                 constraintLayout.setAlpha((float) 0.50);
                 linearLayout.setVisibility(View.GONE);
                 order = false;
+                PreferenceHelper.writeIntToPreference(OrderActivity.this, "wish", 0);
             }
         });
     }
