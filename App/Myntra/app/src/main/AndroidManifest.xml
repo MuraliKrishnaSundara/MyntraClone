@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Myntra">
-        <activity android:name=".FootWearActivity"></activity>
+        <activity android:name=".AddressActivity"></activity>
+        <activity android:name=".FootWearActivity" />
         <activity
             android:name=".WishlistActivity"
             android:label="@string/title_activity_wishlist"

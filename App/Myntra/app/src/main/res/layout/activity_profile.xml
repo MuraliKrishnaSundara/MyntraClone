@@ -65,8 +65,8 @@
                 android:layout_below="@id/blackView"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/ivProfileLogin"
-                android:text="Name"
                 android:gravity="center"
+                android:text="Name"
                 android:textAllCaps="true"
                 android:textColor="#9E0000"
                 android:textSize="24sp"
@@ -76,7 +76,6 @@
                 android:id="@+id/btnLogin_Signup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
                 android:layout_below="@id/blackView"
                 android:layout_alignBottom="@+id/ivProfileLogin"
                 android:layout_alignParentRight="true"
@@ -89,7 +88,8 @@
                 android:layout_toRightOf="@+id/ivProfileLogin"
                 android:background="@color/pink"
                 android:text="LOG IN/SIGN UP"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:visibility="visible" />
 
             <View
                 android:id="@+id/ordersBar"
@@ -236,7 +236,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/wishlistBar"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="206dp"
                 android:src="@drawable/arrow_right" />
@@ -286,7 +286,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/notificationsBar"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="206dp"
                 android:src="@drawable/arrow_right" />

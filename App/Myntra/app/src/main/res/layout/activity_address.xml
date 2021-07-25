@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddressActivity">
+
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="@id/tvProfile"
+        app:layout_constraintTop_toTopOf="@id/tvProfile" />
+
+    <TextView
+        android:id="@+id/tvProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:drawableLeft="@drawable/ic_back"
+        android:drawablePadding="10dp"
+        android:text="PAYMENT PROCESS"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <RelativeLayout
+            android:id="@+id/profileRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contactDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="CONTACT DETAILS"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/nameBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/contactDetails"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg" />
+
+            <EditText
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/nameBar"
+                android:layout_alignTop="@id/nameBar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:hint="Name*" />
+
+            <View
+                android:id="@+id/mobileBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/nameBar"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg" />
+
+            <EditText
+                android:id="@+id/tvMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/mobileBar"
+                android:layout_alignTop="@id/mobileBar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:hint="Mobile No*"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mobileBar"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="ADDRESS"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/pinCodeBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/address"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg" />
+
+            <EditText
+                android:id="@+id/tvPincode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/pinCodeBar"
+                android:layout_alignTop="@id/pinCodeBar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:hint="Pin Code*" />
+
+            <View
+                android:id="@+id/houseNoBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/pinCodeBar"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg" />
+
+            <EditText
+                android:id="@+id/houseNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/houseNoBar"
+                android:layout_alignTop="@id/houseNoBar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:hint="Address (House No, Building, Street, Area)*" />
+
+            <View
+                android:id="@+id/townBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/houseNoBar"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg" />
+
+            <EditText
+                android:id="@+id/town"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/townBar"
+                android:layout_alignTop="@id/townBar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:hint="Locality / Town*" />
+
+            <View
+                android:id="@+id/cityBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/townBar"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg" />
+
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/cityBar"
+                android:layout_alignTop="@id/cityBar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:hint="City / District*" />
+
+            <View
+                android:id="@+id/stateBar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/cityBar"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg" />
+
+            <EditText
+                android:id="@+id/state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/stateBar"
+                android:layout_alignTop="@id/stateBar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:hint="State*" />
+
+            <CheckBox
+                android:id="@+id/cbUpi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stateBar"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="UPI"
+                android:textColor="#1B1B1B" />
+
+            <CheckBox
+                android:id="@+id/cbDebit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbUpi"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Debit Card"
+                android:textColor="#1B1B1B" />
+
+            <CheckBox
+                android:id="@+id/cbCredit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbDebit"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Credit Card"
+                android:textColor="#1B1B1B" />
+
+            <CheckBox
+                android:id="@+id/cbCOD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbCredit"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Cash On Delivery (COD)"
+                android:textColor="#1B1B1B" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnPlaceOrder" />
+
+    <Button
+        android:id="@+id/btnPlaceOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@color/red"
+        android:text="PLACE ORDER"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

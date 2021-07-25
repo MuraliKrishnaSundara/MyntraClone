@@ -72,7 +72,8 @@ public class ShoppingBag extends AppCompatActivity {
                 } else if (added != 1) {
                     Toast.makeText(ShoppingBag.this, "Add orders to Cart first", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(ShoppingBag.this, "order done", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(ShoppingBag.this, AddressActivity.class);
+                    startActivity(intent);
                 }
             }
         });
