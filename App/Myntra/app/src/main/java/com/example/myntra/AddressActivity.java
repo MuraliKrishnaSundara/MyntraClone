@@ -3,6 +3,7 @@ package com.example.myntra;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,17 +41,8 @@ public class AddressActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (validPincode() && validPhoneNumber()) {
                     Toast.makeText(AddressActivity.this, "Order placed", Toast.LENGTH_SHORT).show();
-                    PreferenceHelper.writeIntToPreference(AddressActivity.this, "orderDone", 1);
-                    PreferenceHelper.writeIntToPreference(AddressActivity.this, "added", 0);
-                    PreferenceHelper.writeIntToPreference(AddressActivity.this, "quantity", quantityNum);
-                    PreferenceHelper.writeIntToPreference(AddressActivity.this, "total", price * quantityNum);
-                    if (PreferenceHelper.getIntFromPreference(AddressActivity.this, "orderDone") == 1) {
-                        constraintLayout.setVisibility(View.GONE);
-                        itemCount.setText("NO ITEMS ADDED TO CART");
-                        orderTotal.setText("0");
-                        quantityNum = 0;
-                        orders.setVisibility(View.VISIBLE);
-                    }
+                    Intent intent = new Intent(AddressActivity.this, OrderActivity.class);
+                    startActivity(intent);
                 }
             }
         });

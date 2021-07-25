@@ -75,6 +75,17 @@ public class ShoppingBag extends AppCompatActivity {
                 } else if (added != 1) {
                     Toast.makeText(ShoppingBag.this, "Add orders to Cart first", Toast.LENGTH_SHORT).show();
                 } else {
+                    PreferenceHelper.writeIntToPreference(ShoppingBag.this, "orderDone", 1);
+                    PreferenceHelper.writeIntToPreference(ShoppingBag.this, "added", 0);
+                    PreferenceHelper.writeIntToPreference(ShoppingBag.this, "quantity", quantityNum);
+                    PreferenceHelper.writeIntToPreference(ShoppingBag.this, "total", price * quantityNum);
+                    if (PreferenceHelper.getIntFromPreference(ShoppingBag.this, "orderDone") == 1) {
+                        constraintLayout.setVisibility(View.GONE);
+                        itemCount.setText("NO ITEMS ADDED TO CART");
+                        orderTotal.setText("0");
+                        quantityNum = 0;
+                        orders.setVisibility(View.VISIBLE);
+                    }
                     Intent intent = new Intent(ShoppingBag.this, AddressActivity.class);
                     startActivity(intent);
                 }
@@ -139,7 +150,7 @@ public class ShoppingBag extends AppCompatActivity {
         orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(ShoppingBag.this,OrderActivity.class);
+                Intent intent = new Intent(ShoppingBag.this, OrderActivity.class);
                 startActivity(intent);
             }
         });

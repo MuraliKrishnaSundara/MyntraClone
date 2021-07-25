@@ -37,6 +37,7 @@ public class HomeActivity extends AppCompatActivity {
     private View bgBlack;
     private View menuCategoriesBar;
     private View themeStoreBar;
+    private View order;
     private LinearLayout menuScreen;
 
     String url1 = "https://www.linkpicture.com/q/megaendofseason.jpeg";
@@ -180,6 +181,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, OrderActivity.class);
+                startActivity(intent);
+            }
+        });
 
         ArrayList<AutoScroll1Model> sliderDataArrayList = new ArrayList<>();
         SliderView sliderView = findViewById(R.id.slider);
@@ -216,6 +224,7 @@ public class HomeActivity extends AppCompatActivity {
         profile = findViewById(R.id.profile);
         womenWest = findViewById(R.id.WomenWest);
         tvHome = findViewById(R.id.tvCHome);
+        order = findViewById(R.id.menuOrderBar);
         ivHs1Men = findViewById(R.id.hs1Men);
         ivHs1Women = findViewById(R.id.hs1Women);
         ivHs1Gadget = findViewById(R.id.hs1Gadgets);
