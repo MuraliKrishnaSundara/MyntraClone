@@ -25,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
     private ImageView ivHs1Women;
     private ImageView ivHs1Gadget;
     private ImageView ivHs1Kid;
+    private ImageView ivHs1FootWear;
     private ImageView cart;
     private ImageView menuBar;
     private ImageView closeMenu;
@@ -128,6 +129,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ivHs1FootWear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, FootWearActivity.class);
+                startActivity(intent);
+            }
+        });
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -195,6 +203,7 @@ public class HomeActivity extends AppCompatActivity {
         ivHs1Women = findViewById(R.id.hs1Women);
         ivHs1Gadget = findViewById(R.id.hs1Gadgets);
         ivHs1Kid = findViewById(R.id.hs1Kids);
+        ivHs1FootWear = findViewById(R.id.hs1FootWear);
         cart = findViewById(R.id.cart);
         wishList = findViewById(R.id.favourite);
         menuBar = findViewById(R.id.dehaze);

@@ -232,6 +232,7 @@
                             android:src="@drawable/hhome" />
 
                         <ImageView
+                            android:id="@+id/hs1FootWear"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:src="@drawable/hfootwear" />

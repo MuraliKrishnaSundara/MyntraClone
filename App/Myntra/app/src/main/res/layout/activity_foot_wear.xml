@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FootWearActivity">
+
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="@id/tvMyntraFasionStore"
+        app:layout_constraintTop_toTopOf="@id/tvMyntraFasionStore" />
+
+    <TextView
+        android:id="@+id/tvMyntraFasionStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:drawableLeft="@drawable/ic_back"
+        android:drawablePadding="10dp"
+        android:text="MYNTRA FASHION STORE"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/ivCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_cart"
+        app:layout_constraintBottom_toBottomOf="@id/tvMyntraFasionStore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvMyntraFasionStore" />
+
+    <ImageView
+        android:id="@+id/ivWishlist"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/heartblack"
+        app:layout_constraintBottom_toBottomOf="@id/tvMyntraFasionStore"
+        app:layout_constraintEnd_toStartOf="@id/ivCart"
+        app:layout_constraintTop_toTopOf="@id/tvMyntraFasionStore" />
+
+    <ImageView
+        android:id="@+id/ivSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@id/tvMyntraFasionStore"
+        app:layout_constraintEnd_toStartOf="@id/ivWishlist"
+        app:layout_constraintTop_toTopOf="@id/tvMyntraFasionStore" />
+
+
+    <View
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvGadgets" />
+
+    <TextView
+        android:id="@+id/tvGadgets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="FOOT WEAR"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvSort"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/sort_men"
+        android:drawablePadding="10dp"
+        android:text="SORT"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tvGadgets"
+        app:layout_constraintEnd_toStartOf="@id/tvFilter"
+        app:layout_constraintStart_toEndOf="@id/tvGadgets"
+        app:layout_constraintTop_toTopOf="@id/tvGadgets" />
+
+    <TextView
+        android:id="@+id/tvFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/filter_men"
+        android:drawablePadding="10dp"
+        android:text="FILTER"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tvGadgets"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvSort"
+        app:layout_constraintTop_toTopOf="@id/tvGadgets" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/footWearRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintTop_toBottomOf="@id/topBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
