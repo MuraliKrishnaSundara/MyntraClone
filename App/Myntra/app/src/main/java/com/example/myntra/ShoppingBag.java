@@ -30,7 +30,6 @@ public class ShoppingBag extends AppCompatActivity {
     private TextView quantity;
     private ImageView removeQuantity;
     private static int quantityNum;
-    private Button orders;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +81,6 @@ public class ShoppingBag extends AppCompatActivity {
                         constraintLayout.setVisibility(View.GONE);
                         itemCount.setText("NO ITEMS ADDED TO CART");
                         orderTotal.setText("0");
-                        orders.setVisibility(View.VISIBLE);
                     }
                     Intent intent = new Intent(ShoppingBag.this, AddressActivity.class);
                     startActivity(intent);
@@ -145,14 +143,6 @@ public class ShoppingBag extends AppCompatActivity {
                 }
             }
         });
-        orders.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ShoppingBag.this, OrderActivity.class);
-                startActivity(intent);
-            }
-        });
-
     }
 
     private void initViews() {
@@ -172,6 +162,5 @@ public class ShoppingBag extends AppCompatActivity {
         addQuantity = findViewById(R.id.addQuantity);
         quantity = findViewById(R.id.quantity);
         removeQuantity = findViewById(R.id.removeQuantity);
-        orders = findViewById(R.id.orderMenu);
     }
 }
