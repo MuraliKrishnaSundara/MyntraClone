@@ -77,18 +77,6 @@ public class ShoppingBag extends AppCompatActivity {
                 } else {
                     Intent intent = new Intent(ShoppingBag.this, AddressActivity.class);
                     startActivity(intent);
-                    Toast.makeText(ShoppingBag.this, "order done", Toast.LENGTH_SHORT).show();
-                    PreferenceHelper.writeIntToPreference(ShoppingBag.this, "orderDone", 1);
-                    PreferenceHelper.writeIntToPreference(ShoppingBag.this, "added", 0);
-                    PreferenceHelper.writeIntToPreference(ShoppingBag.this, "quantity", quantityNum);
-                    PreferenceHelper.writeIntToPreference(ShoppingBag.this, "total", price * quantityNum);
-                    if (PreferenceHelper.getIntFromPreference(ShoppingBag.this, "orderDone") == 1) {
-                        constraintLayout.setVisibility(View.GONE);
-                        itemCount.setText("NO ITEMS ADDED TO CART");
-                        orderTotal.setText("0");
-                        quantityNum = 0;
-                        orders.setVisibility(View.VISIBLE);
-                    }
                 }
             }
         });

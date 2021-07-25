@@ -28,6 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView tvProfile;
     private View bgView;
     private View WishlistBar;
+    private View order;
     private LinearLayout loginScreen;
 
     @Override
