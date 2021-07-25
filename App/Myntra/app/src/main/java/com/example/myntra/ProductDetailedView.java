@@ -24,7 +24,6 @@ public class ProductDetailedView extends AppCompatActivity {
     private RadioGroup radioGroup;
     private boolean proceed = false;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
