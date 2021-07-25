@@ -26,7 +26,6 @@ public class OrderActivity extends AppCompatActivity {
     private TextView total;
     private TextView quantity;
     boolean order = true;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
