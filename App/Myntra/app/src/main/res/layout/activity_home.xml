@@ -500,6 +500,7 @@
                 </HorizontalScrollView>
 
                 <ImageView
+                    android:id="@+id/WomenWest"
                     android:layout_width="match_parent"
                     android:layout_height="320dp"
                     android:src="@drawable/womenweaternwear" />

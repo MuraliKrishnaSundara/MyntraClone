@@ -39,6 +39,7 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
     private LinearLayout llgadgets;
     private TextView tvgadgestsLL;
     private ImageView cart;
+    private ImageView Favourite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +82,13 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CategoriesActivity.this, ShoppingBag.class);
+                startActivity(intent);
+            }
+        });
+        Favourite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CategoriesActivity.this, WishlistActivity.class);
                 startActivity(intent);
             }
         });
@@ -231,6 +239,7 @@ public class CategoriesActivity extends AppCompatActivity implements ItemClickLi
         tvgadgestsLL = findViewById(R.id.tvGadgetsLL);
         showGadgets = findViewById(R.id.showGadgets);
         cart = findViewById(R.id.cart);
+        Favourite = findViewById(R.id.favourite);
     }
 
     @Override

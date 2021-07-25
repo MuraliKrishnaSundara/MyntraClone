@@ -17,17 +17,18 @@ public class ProfileActivity extends AppCompatActivity {
     private ImageView studio;
     private ImageView explore;
     private ImageView profile;
-    private TextView tvProfile;
-    private Button btn_login_signup;
-    private LinearLayout loginScreen;
     private ImageView closeLogin;
+    private ImageView profileImage;
+    private Button btn_login_signup;
     private Button loginContinue;
     private Button forgot;
     private Button signUp;
     private EditText phoneNumber;
     private TextView profileName;
-    private ImageView profileImage;
+    private TextView tvProfile;
     private View bgView;
+    private View WishlistBar;
+    private LinearLayout loginScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +62,13 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProfileActivity.this, ExploreActivity.class);
+                startActivity(intent);
+            }
+        });
+        WishlistBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, WishlistActivity.class);
                 startActivity(intent);
             }
         });
@@ -133,6 +141,7 @@ public class ProfileActivity extends AppCompatActivity {
         profileName = findViewById(R.id.tvProfileName);
         bgView = findViewById(R.id.blackView);
         profileImage = findViewById(R.id.ivProductImage);
+        WishlistBar = findViewById(R.id.wishlistBar);
     }
 
     private boolean validPhoneNumber() {

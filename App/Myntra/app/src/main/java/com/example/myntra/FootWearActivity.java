@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +21,8 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
     private RecyclerView recyclerView;
     private ArrayList<ProductData> footWearProductList;
     private TextView mTvSort;
-
+    private ImageView wishlist;
+    private ImageView cart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,20 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
         initViews();
         buildIdentityList();
         setRecyclerView();
+        wishlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FootWearActivity.this, WishlistActivity.class);
+                startActivity(intent);
+            }
+        });
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FootWearActivity.this, ShoppingBag.class);
+                startActivity(intent);
+            }
+        });
         mTvSort.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -94,6 +110,8 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
     private void initViews() {
         recyclerView = findViewById(R.id.footWearRecyclerView);
         mTvSort = findViewById(R.id.tvSort);
+        wishlist = findViewById(R.id.ivWishlist);
+        cart = findViewById(R.id.ivCart);
     }
 
     @Override

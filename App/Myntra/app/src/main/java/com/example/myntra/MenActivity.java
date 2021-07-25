@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,8 @@ public class MenActivity extends AppCompatActivity implements OnProductClick {
     private RecyclerView recyclerView;
     private ArrayList<ProductData> menProductList;
     private TextView mTvSort;
+    private ImageView wishlist;
+    private ImageView cart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,20 @@ public class MenActivity extends AppCompatActivity implements OnProductClick {
             public void onClick(View v) {
                 menProductList.sort(Comparator.comparing(ProductData::getProductCost));
                 setRecyclerView();
+            }
+        });
+        wishlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenActivity.this, WishlistActivity.class);
+                startActivity(intent);
+            }
+        });
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenActivity.this, ShoppingBag.class);
+                startActivity(intent);
             }
         });
     }
@@ -95,6 +112,8 @@ public class MenActivity extends AppCompatActivity implements OnProductClick {
     private void initViews() {
         recyclerView = findViewById(R.id.mensWearRecyclerView);
         mTvSort = findViewById(R.id.tvSort);
+        wishlist = findViewById(R.id.ivWishlist);
+        cart = findViewById(R.id.ivCart);
     }
 
     @Override

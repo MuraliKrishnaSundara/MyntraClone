@@ -30,12 +30,14 @@ public class HomeActivity extends AppCompatActivity {
     private ImageView menuBar;
     private ImageView closeMenu;
     private ImageView menuArrow;
+    private ImageView flipFlops;
+    private ImageView wishList;
+    private ImageView womenWest;
     private TextView loginSignUp;
     private View bgBlack;
     private View menuCategoriesBar;
     private View themeStoreBar;
     private LinearLayout menuScreen;
-    private ImageView wishList;
 
     String url1 = "https://www.linkpicture.com/q/megaendofseason.jpeg";
     String url2 = "https://www.linkpicture.com/q/glowupsale.jpeg";
@@ -164,6 +166,20 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        flipFlops.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, FootWearActivity.class);
+                startActivity(intent);
+            }
+        });
+        womenWest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, WomenActivity.class);
+                startActivity(intent);
+            }
+        });
 
         ArrayList<AutoScroll1Model> sliderDataArrayList = new ArrayList<>();
         SliderView sliderView = findViewById(R.id.slider);
@@ -198,6 +214,7 @@ public class HomeActivity extends AppCompatActivity {
         studio = findViewById(R.id.studio);
         explore = findViewById(R.id.explore);
         profile = findViewById(R.id.profile);
+        womenWest = findViewById(R.id.WomenWest);
         tvHome = findViewById(R.id.tvCHome);
         ivHs1Men = findViewById(R.id.hs1Men);
         ivHs1Women = findViewById(R.id.hs1Women);
@@ -214,5 +231,6 @@ public class HomeActivity extends AppCompatActivity {
         bgBlack = findViewById(R.id.bgBlack);
         menuArrow = findViewById(R.id.menuArrow);
         loginSignUp = findViewById(R.id.Login_SignUp);
+        flipFlops = findViewById(R.id.ivFlipFlops);
     }
 }
