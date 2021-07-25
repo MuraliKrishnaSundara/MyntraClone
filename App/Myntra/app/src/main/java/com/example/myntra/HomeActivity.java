@@ -100,8 +100,14 @@ public class HomeActivity extends AppCompatActivity {
         bgBlack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, Login_Activity.class);
-                startActivity(intent);
+                String userNameData = PreferenceHelper.getStringFromPreference(HomeActivity.this, "userName");
+                if (userNameData.equals("")) {
+                    Intent intent = new Intent(HomeActivity.this, Login_Activity.class);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                    startActivity(intent);
+                }
             }
         });
         ivHs1Men.setOnClickListener(new View.OnClickListener() {
@@ -149,7 +155,6 @@ public class HomeActivity extends AppCompatActivity {
         menuBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 menuScreen.setVisibility(View.VISIBLE);
 
             }
