@@ -1,18 +1,24 @@
 package com.example.myntra;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
-public class WomenActivity extends AppCompatActivity implements OnProductClick{
+public class WomenActivity extends AppCompatActivity implements OnProductClick {
 
     private RecyclerView recyclerView;
     private ArrayList<ProductData> womenProductList;
+    private TextView mTvSort;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +27,14 @@ public class WomenActivity extends AppCompatActivity implements OnProductClick{
         initViews();
         buildIdentityList();
         setRecyclerView();
+        mTvSort.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onClick(View v) {
+                womenProductList.sort(Comparator.comparing(ProductData::getProductCost));
+                setRecyclerView();
+            }
+        });
     }
 
     private void buildIdentityList() {
@@ -68,7 +82,7 @@ public class WomenActivity extends AppCompatActivity implements OnProductClick{
     }
 
     private void setRecyclerView() {
-        ProductAdapter womenAdapter = new ProductAdapter(womenProductList,this);
+        ProductAdapter womenAdapter = new ProductAdapter(womenProductList, this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(womenAdapter);
@@ -77,6 +91,7 @@ public class WomenActivity extends AppCompatActivity implements OnProductClick{
 
     private void initViews() {
         recyclerView = findViewById(R.id.womenWearRecyclerView);
+        mTvSort = findViewById(R.id.tvSort);
     }
 
     @Override

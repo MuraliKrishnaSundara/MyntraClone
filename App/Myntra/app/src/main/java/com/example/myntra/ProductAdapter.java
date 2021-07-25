@@ -36,4 +36,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductsViewHolder> {
     public int getItemCount() {
         return productDataList.size();
     }
+
+    public void updateData(ArrayList<ProductData> viewModels) {
+        notifyDataSetChanged();
+    }
+
 }
