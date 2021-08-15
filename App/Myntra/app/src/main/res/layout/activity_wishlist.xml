@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#8DEDE4E4"
-    tools:context=".WishlistActivity">
+    tools:context=".Order.WishlistActivity">
 
     <View
         android:id="@+id/wViewTop"
