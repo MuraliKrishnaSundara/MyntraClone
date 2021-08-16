@@ -38,9 +38,9 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
         initViews();
         buildIdentityList();
         setRecyclerView();
-
     }
 
+    //Foot wear product list
     private void buildIdentityList() {
         footWearProductList = new ArrayList<>();
         footWearProductList.add(new ProductData(R.drawable.fwi1, "Red Tape", "Men Walking Shoes", 1224));
@@ -65,6 +65,7 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
         footWearProductList.add(new ProductData(R.drawable.fwi20, "Clarks", "Women Leather Pumps", 3599));
     }
 
+    //Setting recycler view
     private void setRecyclerView() {
         ProductAdapter footWearAdapter = new ProductAdapter(footWearProductList, this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
@@ -73,12 +74,15 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
 
     }
 
+    //Initialization of views
     private void initViews() {
         recyclerView = findViewById(R.id.footWearRecyclerView);
         mTvSortA = findViewById(R.id.downArrow);
         mTvSortD = findViewById(R.id.upArrow);
         wishlist = findViewById(R.id.ivWishlist);
         cart = findViewById(R.id.ivCart);
+
+        //Navigation to wishlist
         wishlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +90,7 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
                 startActivity(intent);
             }
         });
+        //Navigation to cart
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,6 +98,7 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
                 startActivity(intent);
             }
         });
+        //Sorting
         mTvSortA.setOnClickListener(new View.OnClickListener() {
             @androidx.annotation.RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -101,6 +107,7 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
                 setRecyclerView();
             }
         });
+        //Reverse sorting
         mTvSortD.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -111,6 +118,7 @@ public class FootWearActivity extends AppCompatActivity implements OnProductClic
         });
     }
 
+    //Navigation to product detailed view
     @Override
     public void ItemClicked(ProductData productData, int position) {
         Intent intent = new Intent(FootWearActivity.this, ProductDetailedView.class);
