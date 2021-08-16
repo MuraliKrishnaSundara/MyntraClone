@@ -78,6 +78,8 @@ public class WomenActivity extends AppCompatActivity implements OnProductClick {
         mTvSortD = findViewById(R.id.upArrow);
         wishlist = findViewById(R.id.ivWishlist);
         cart = findViewById(R.id.ivCart);
+
+        //Sorting
         mTvSortA.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -86,6 +88,8 @@ public class WomenActivity extends AppCompatActivity implements OnProductClick {
                 setRecyclerView();
             }
         });
+
+        //Reverse sorting
         mTvSortD.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
