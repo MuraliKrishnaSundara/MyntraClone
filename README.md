@@ -1,3 +1,4 @@
+![Screenshot_2021-08-16-17-29-44-829_com example myntra](https://user-images.githubusercontent.com/40376163/129563339-651bbb7a-8fac-4e26-b473-594f2e3f0acd.jpg)
 # MyntraClone
  Team Hustle (1st Project)
 
