@@ -29,3 +29,10 @@
 <img src="https://user-images.githubusercontent.com/40376163/129566689-b503fa6b-4d34-46db-9d9e-b292cbbe75c2.jpg" width=100dp height=200dp/>
 
 </p>
+<br>
+<br>
+<br>
+
+  <h1>Add to cart</h1>
+<img src="https://user-images.githubusercontent.com/40376163/129570623-b46783c5-6a8b-444f-bed2-23d6f77958f4.gif" width=200dp height=400dp/>
+  
