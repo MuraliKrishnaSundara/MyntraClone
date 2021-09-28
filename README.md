@@ -1,6 +1,12 @@
 # MyntraClone
+<br>
  Team Hustle (1st Project)
-  <h1>Project Screenshot</h1>
+<br>
+Myntra is a one stop shop for all your fashion and lifestyle needs. Being India's largest e-commerce store for fashion and lifestyle products, Myntra aims at providing a hassle free and enjoyable shopping experience to shoppers across the country with the widest range of brands and products on its portal. The brand is making a conscious effort to bring the power of fashion to shoppers with an array of the latest and trendiest products available in the country.
+
+
+
+<h1>Project Screenshot</h1>
 <p>
 <img src="https://user-images.githubusercontent.com/40376163/129564363-8d960af3-2bcc-416e-b239-4995c70bf04a.jpg" width=100dp height=200dp/>
 <img src="https://user-images.githubusercontent.com/40376163/129565192-85abfe3d-faf9-460f-9111-7441ec99b675.jpg" width=100dp height=200dp/>
@@ -35,4 +41,85 @@
 
   <h1>Add to cart</h1>
 <img src="https://user-images.githubusercontent.com/40376163/129570623-b46783c5-6a8b-444f-bed2-23d6f77958f4.gif" width=200dp height=400dp/>
-  
+
+
+# Links 
+
+* Blog-Post :- 
+
+# 🔗Open-Source Library
+
+* [Glide](https://github.com/bumptech/glide)
+* [Retrofit](https://square.github.io/retrofit/)
+* [AutoImageSlider](https://github.com/smarteist/Android-Image-Slider)
+
+# Things we used while making this application
+
+* GitHub
+* Recycler View
+* Retrofit Library
+* API
+
+# Tech Stack ✨
+
+* [Android Studio](https://developer.android.com/studio)
+* [Java](https://www.java.com/en/)
+
+# Clone this Repo To Your System Using Android Studio✨
+
+* Step 1: Open your Android Studio then go to the File > New > Project from Version Control as shown in the below image.
+* Step 2: After clicking on the Project from Version Control a pop-up screen will arise like below. In the Version control choose Git from the drop-down menu.
+* Step 3: Then at last paste the link in the URL and choose your Directory. Click on the Clone button and you are done.
+
+# Clone this Repo To Your System Using GitBash✨
+
+* Open Git Bash
+
+* If Git is not already installed, it is super simple. Just go to the Git Download Folder and follow the instructions.
+
+* Go to the current directory where you want the cloned directory to be added.
+
+* To do this, input cd and add your folder location. You can add the folder location by dragging the folder to Git bash.
+
+* Go to the page of the repository that you want to clone
+
+* Click on “Clone or download” and copy the URL.
+
+* Use the git clone command along with the copied URL from earlier. $ git clone [MyntraClone](https://github.com/MuraliKrishnaSundara/MyntraClone.git)
+
+* Press Enter. $ git clone [MyntraClone](https://github.com/MuraliKrishnaSundara/MyntraClone.git) Cloning into Git … remote: Counting objects: 13, done. remote: Compressing objects: 100% (13/13), done. remove: Total 13 (delta 1), reused 0 (delta 1) Unpacking objects: 100% (13/13), done.
+
+Congratulations, you have created your first local clone from your remote Github repository.
+
+Open Android Studio. Go to File > New > Project From Version Control. Copy the link of this repositary. Paste the link in Url Box of Android Studio window and click on "Clone" button.
+
+# Dependencies 
+
+    //general dpendencies
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'// Retrofit & OkHttp
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+
+    // This library is used by retrofit internally to convert json-pojo and pojo-json
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+    //This library is used to observe the API logs, Http status code and the API response
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // dependancy sor slider view
+    implementation 'com.github.smarteist:autoimageslider:1.3.9'
+
+    // dependancy for loading image from url
+    implementation "com.github.bumptech.glide:glide:4.11.0"
+
+# Lessons Learnt📚
